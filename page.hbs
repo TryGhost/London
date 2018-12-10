@@ -3,18 +3,6 @@
 {{#post}}
 <article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-    <header class="post-content-header">
-        <h1 class="post-content-title">{{title}}</h1>
-    </header>
-
-    {{#if custom_excerpt}}
-        <p class="post-content-excerpt">{{custom_excerpt}}</p>
-    {{/if}}
-
-    {{#if feature_image}}
-        <img class="post-content-image" src="{{feature_image}}" alt="{{title}}" />
-    {{/if}}
-
     <div class="post-content-body">
         {{content}}
     </div>
