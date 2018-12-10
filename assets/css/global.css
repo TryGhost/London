@@ -430,26 +430,25 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    line-height: 1.35;
+    line-height: 1.4;
     font-weight: 700;
     text-rendering: optimizeLegibility;
 }
 
 h1 {
     margin: 0 0 0.5em 0;
-    font-size: 5.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-size: 5.7rem;
+    font-weight: 800;
 }
 @media (max-width: 500px) {
     h1 {
-        font-size: 2.6rem;
+        font-size: 2.7rem;
     }
 }
 
 h2 {
     margin: 1.5em 0 0.5em 0;
-    font-size: 4.2rem;
+    font-size: 4rem;
 }
 @media (max-width: 500px) {
     h2 {
@@ -458,9 +457,8 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.8rem;
-    font-weight: 500;
+    margin: 1.5em 0 1em 0;
+    font-size: 3.2rem;
 }
 @media (max-width: 500px) {
     h3 {
@@ -469,21 +467,18 @@ h3 {
 }
 
 h4 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.6rem;
-    font-weight: 500;
+    margin: 1.5em 0 1em 0;
+    font-size: 2.6rem;
 }
 
 h5 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.4rem;
-    font-weight: 500;
+    margin: 1.5em 0 1em 0;
+    font-size: 2.4rem;
 }
 
 h6 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.4rem;
-    font-weight: 500;
+    margin: 1.5em 0 1em 0;
+    font-size: 2.2rem;
 }
 
 /* Global - Set up the things
@@ -505,11 +500,13 @@ h6 {
 }
 
 .kg-card figcaption {
-    padding: 1rem;
-    font-size: 1.4rem;
+    padding: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.4em;
-    color: var(--grey);
+    font-weight: 600;
+    color: var(--darkgrey);
     text-align: center;
+    opacity: 0.4;
 }
 
 .kg-width-wide {
@@ -534,6 +531,12 @@ h6 {
     .kg-width-full {
         width: 100vw;
     }
+}
+
+.kg-width-full figcaption {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
 }
 
 .kg-gallery-container {

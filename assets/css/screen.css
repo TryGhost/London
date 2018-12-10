@@ -1,7 +1,7 @@
 /*
 
 This is a development CSS file which is built to a minified
-production stylesheet in assets/built/screen.css
+production stylesheet in assets/built/screen.css using gulp dev
 
 */
 
@@ -9,10 +9,10 @@ production stylesheet in assets/built/screen.css
 /* Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800');
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Muli', sans-serif;
     background: var(--whitegrey);
 }
 
@@ -100,7 +100,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: -10px;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
 }
 
 .site-head-left {
@@ -117,22 +117,24 @@ body {
     list-style: none;
 }
 
-.nav li {
+.site-head li {
     display: block;
     margin: 0;
     padding: 0;
 }
 
-.nav a {
+.site-head-left a,
+.site-head-right a {
     display: block;
     margin: 0;
     padding: 10px 12px;
     color: var(--darkgrey);
+    font-weight: 600;
     opacity: 0.4;
 }
 
 .nav-current a,
-.nav a:hover {
+.site-head a:hover {
     text-decoration: none;
     opacity: 1;
 }
@@ -150,9 +152,9 @@ body {
     display: block;
     padding: 10px;
     color: var(--darkgrey);
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     line-height: 1em;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -165,7 +167,7 @@ body {
     display: block;
     margin-top: 2px;
     width: auto;
-    height: 30px;
+    height: 28px;
 }
 
 .site-head-right {
@@ -178,45 +180,6 @@ body {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-}
-
-.social-links a:last-of-type {
-    padding-right: 20px;
-}
-
-.social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 10px;
-    color: var(--darkgrey);
-    opacity: 0.4;
-}
-
-.social-link:hover {
-    opacity: 1;
-}
-
-.social-link svg {
-    height: 1.8rem;
-    fill: var(--darkgrey);
-}
-
-.social-link-fb svg {
-    height: 1.5rem;
-}
-
-.social-link-wb svg {
-    height: 1.6rem;
-}
-
-.social-link-wb svg path {
-    stroke: var(--darkgrey);
-}
-
-.social-link-rss svg {
-    height: 1.9rem;
 }
 
 .subscribe-button {
@@ -321,7 +284,7 @@ body {
 .post-card-title {
     margin: 0;
     display: inline-block;
-    font-size: 3rem;
+    font-size: 3.2rem;
     max-width: 70%;
     text-align: center;
 }
@@ -330,7 +293,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .post-content {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 6vw 0;
 }
@@ -344,19 +307,19 @@ body {
 .post-content-title {
     margin: 0 0 3vw;
     color: var(--darkgrey);
-    font-weight: 500;
     text-align: center;
 }
 
 .post-content-excerpt {
-    margin: 0 0 3vw;
-    font-size: 2.4rem;
+    margin: -2vw 0 3vw;
+    font-size: 2.2rem;
     line-height: 1.6em;
     color: var(--grey);
+    text-align: center;
 }
 @media (max-width: 500px) {
     .post-content-excerpt {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -371,12 +334,12 @@ body {
 }
 
 .post-content-body {
-    font-size: 2.2rem;
-    line-height: 1.6em;
+    font-size: 1.9rem;
+    line-height: 1.65em;
 }
 @media (max-width: 500px) {
     .post-content-body {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -498,6 +461,8 @@ body {
     box-shadow: none !important;
 }
 
+/* Author Archive
+/* ---------------------------------------------------------- */
 
 .author-meta {
     display: flex;
@@ -507,15 +472,35 @@ body {
     color: var(--midgrey);
 }
 
-.author-meta .bull {
-    display: inline-block;
-    margin: 0 12px;
-    opacity: 0.5;
+.author-links {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
-@media (max-width: 500px) {
-    .author-location,
-    .author-stats {
-        display: none;
-    }
+.author-links a {
+    display: block;
+    margin: 0;
+    padding: 0 12px;
+    color: var(--darkgrey);
+    opacity: 0.4;
+}
+
+.author-links a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.author-links .divider {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+/* Page Template
+/* ---------------------------------------------------------- */
+
+.page-template .post-content-body h1,
+.page-template .post-content-body h2,
+.page-template .post-content-body h3 {
+    text-align: center;
 }
