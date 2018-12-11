@@ -1,0 +1,30 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours */
+    --blue: #3eb0ef;
+    --green: #a4d037;
+    --purple: #ad26b4;
+    --yellow: #fecd35;
+    --red: #f05230;
+    --darkgrey: #131313;
+    --grey: #777;
+    --midgrey: #999;
+    --lightgrey: #bbb;
+    --whitegrey: #fafafa;
+    --pink: #fa3a57;
+
+    --color-primary: #3eb0ef;
+    --color-base: #131313;
+
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+}

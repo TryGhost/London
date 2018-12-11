@@ -1,7 +1,5 @@
-/* Variables
-/* ---------------------------------------------------------- */
-
 :root {
+
     /* Colours */
     --blue: #3eb0ef;
     --green: #a4d037;
@@ -14,7 +12,33 @@
     --lightgrey: #bbb;
     --whitegrey: #fafafa;
     --pink: #fa3a57;
+
+    --color-primary: #3eb0ef;
+    --color-base: #131313;
+
+    /* Fonts */
+    --font-sans-serif: 'Muli', sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0.5rem;
+
 }
+
 
 /* Reset
 /* ---------------------------------------------------------- */
