@@ -1,4 +1,5 @@
-/* Buttons */
+/* Buttons
+/* ---------------------------------------------------------- */
 
 input[type="submit"],
 input[type="reset"],
@@ -90,9 +91,9 @@ input[type="button"].large,
 button.large,
 .button.large {
     font-size: 1.6rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
-    padding: 0 2.75rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding: 0 3rem;
 }
 
 @media (min-width: var(--medium)) {
@@ -111,8 +112,8 @@ button.large,
     button.large,
     .button.large {
         font-size: 1rem;
-        height: 4.5rem;
-        line-height: 4.5rem;
+        height: 5rem;
+        line-height: 5rem;
     }
 }
 

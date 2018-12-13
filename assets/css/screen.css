@@ -10,6 +10,10 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 @import "vars.css";
 @import "global.css";
+@import "components/lists.css";
+@import "components/grid.css";
+@import "components/tables.css";
+@import "components/forms.css";
 @import "components/buttons.css";
 @import "components/actions.css";
 
