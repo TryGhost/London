@@ -1,45 +1,3 @@
-:root {
-
-    /* Colours */
-    --blue: #3eb0ef;
-    --green: #a4d037;
-    --purple: #ad26b4;
-    --yellow: #fecd35;
-    --red: #f05230;
-    --darkgrey: #131313;
-    --grey: #777;
-    --midgrey: #999;
-    --lightgrey: #bbb;
-    --whitegrey: #fafafa;
-    --pink: #fa3a57;
-
-    --color-primary: #3eb0ef;
-    --color-base: #131313;
-
-    /* Fonts */
-    --font-sans-serif: 'Muli', sans-serif;
-    --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
-    --font-light: 100;
-    --font-normal: 400;
-    --font-bold: 700;
-    --font-heavy: 800;
-
-    /* Breakpoints */
-    --xlarge: 1680px;
-    --large: 1280px;
-    --medium: 980px;
-    --small: 740px;
-    --xsmall: 480px;
-
-    /* Sizes */
-    --height: 4rem;
-    --margin: 2rem;
-    --radius: 0.5rem;
-
-}
-
-
 /* Reset
 /* ---------------------------------------------------------- */
 
@@ -344,68 +302,9 @@ video {
     vertical-align: middle;
 }
 
-fieldset {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
 p,
-ul,
-ol,
-dl,
 blockquote {
     margin: 0 0 1.5em 0;
-}
-
-ol,
-ul {
-    padding-left: 1.3em;
-    padding-right: 1.5em;
-}
-
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-    margin: 0.5em 0 1em;
-}
-
-ul {
-    list-style: disc;
-}
-
-ol {
-    list-style: decimal;
-}
-
-ul,
-ol {
-    max-width: 100%;
-}
-
-li {
-    margin: 0.5em 0;
-    padding-left: 0.3em;
-    line-height: 1.6em;
-}
-
-dt {
-    float: left;
-    margin: 0 20px 0 0;
-    width: 120px;
-    color: var(--darkgrey);
-    font-weight: 500;
-    text-align: right;
-}
-
-dd {
-    margin: 0 0 5px 0;
-    text-align: left;
 }
 
 blockquote {
