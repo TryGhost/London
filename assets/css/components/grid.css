@@ -1,2 +1,25 @@
 /* Grid
 /* ---------------------------------------------------------- */
+
+.row {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col-6,
+.col-12 {
+    padding: 1rem;
+}
+
+.col-6 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
