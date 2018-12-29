@@ -18,52 +18,9 @@ button,
     line-height: var(--height);
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     white-space: nowrap;
     appearance: none;
-    transition: 0.3s ease;
-}
-
-input[type="submit"].icon:before,
-input[type="reset"].icon:before,
-input[type="button"].icon:before,
-button.icon:before,
-.button.icon:before {
-    margin-right: 0.5rem;
-}
-
-input[type="submit"].icon.solo,
-input[type="reset"].icon.solo,
-input[type="button"].icon.solo,
-button.icon.solo,
-.button.icon.solo {
-    position: relative;
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
-    border-radius: 4rem;
-    text-indent: 4rem;
-    overflow: hidden;
-    padding: 0;
-    white-space: nowrap;
-}
-
-input[type="submit"].icon.solo:before,
-input[type="reset"].icon.solo:before,
-input[type="button"].icon.solo:before,
-button.icon.solo:before,
-.button.icon.solo:before {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    line-height: inherit;
-    font-size: 1.25rem;
-    margin-right: 0;
-    text-align: center;
-    text-indent: 0;
+    transition: 0.4s ease;
 }
 
 input[type="submit"].fit,
@@ -79,10 +36,10 @@ input[type="reset"].small,
 input[type="button"].small,
 button.small,
 .button.small {
-    font-size: 1.2rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    height: calc(var(--height) * 0.9);
+    line-height: calc(var(--height) * 0.9);
     padding: 0 1.5rem;
+    font-size: 1.2rem;
 }
 
 input[type="submit"].large,
@@ -90,32 +47,12 @@ input[type="reset"].large,
 input[type="button"].large,
 button.large,
 .button.large {
-    font-size: 1.6rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
+    height: calc(var(--height) * 1.14);
+    line-height: calc(var(--height) * 1.14);
     padding: 0 3rem;
+    font-size: 1.6rem;
 }
 
-@media (min-width: var(--medium)) {
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"],
-    button,
-    .button {
-        font-size: 1.6rem;
-        height: 3.25rem;
-        line-height: 3.25rem;
-    }
-    input[type="submit"].large,
-    input[type="reset"].large,
-    input[type="button"].large,
-    button.large,
-    .button.large {
-        font-size: 1rem;
-        height: 5rem;
-        line-height: 5rem;
-    }
-}
 
 input[type="submit"].disabled,
 input[type="submit"]:disabled,
@@ -128,7 +65,7 @@ button:disabled,
 .button.disabled,
 .button:disabled {
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 0.4;
 }
 
 
@@ -138,9 +75,9 @@ input[type="reset"],
 input[type="button"],
 button,
 .button {
+    color: var(--color-primary) !important;
     background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--color-primary);
-    color: var(--color-primary) !important;
 }
 
 input[type="submit"]:hover,
@@ -149,8 +86,9 @@ input[type="button"]:hover,
 button:hover,
 .button:hover {
     text-decoration: none;
-    color: var(--color-primary) !important;
-    box-shadow: inset 0 0 0 2px var(--color-primary);
+    color: color(var(--color-primary) l(-15%)) !important;
+    box-shadow: inset 0 0 0 2px color(var(--color-primary) l(-10%));
+    transition: 0.2s ease;
 }
 
 input[type="submit"].primary,
@@ -158,9 +96,9 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
+    color: #fff !important;
     background-color: var(--color-primary);
     box-shadow: none;
-    color: #fff !important;
 }
 
 input[type="submit"].primary:hover,
