@@ -6,10 +6,11 @@ production stylesheet in assets/built/screen.css using gulp dev
 */
 
 
-/* Global - Set up the things
+/* Lib - Local component imports
 /* ---------------------------------------------------------- */
 @import "vars.css";
-@import "global.css";
+@import "components/global.css";
+@import "components/ghost.css";
 @import "components/lists.css";
 @import "components/grid.css";
 @import "components/tables.css";
@@ -17,7 +18,14 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/buttons.css";
 @import "components/actions.css";
 
+
+/* Vendor - External imports
+/* ---------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800');
+
+
+/* Main - Theme styles
+/* ---------------------------------------------------------- */
 
 body {
     font-family: 'Muli', sans-serif;

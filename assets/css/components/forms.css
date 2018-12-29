@@ -13,7 +13,7 @@ fieldset {
 
 label {
     color: var(--color-primary);
-    display: block;
+    play: block;
     font-size: 0.9em;
     font-weight: var(--font-bold);
     margin: 0 0 (var(--margin) * 0.5) 0;
@@ -34,7 +34,7 @@ textarea {
     color: inherit;
     display: block;
     outline: 0;
-    padding: 0 1em;
+    padding: 0 0.6em;
     text-decoration: none;
     width: 100%;
 }
@@ -63,10 +63,6 @@ textarea:focus {
 }
 
 select {
-    background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#000' /></svg>");
-    background-size: 1.25em;
-    background-repeat: no-repeat;
-    background-position: calc(100% - 1em) center;
     height: var(--height);
     padding-right: var(--height);
     text-overflow: ellipsis;
@@ -97,14 +93,13 @@ select {
 }
 
 textarea {
-    padding: 0.75em 1em;
+    padding: 0.3em 0.6em;
     resize: vertical;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     display: block;
-    float: left;
     margin-right: -2em;
     opacity: 0;
     width: 1em;
@@ -113,14 +108,16 @@ input[type="radio"] {
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    color: var(--color-base);
     cursor: pointer;
-    display: inline-block;
     font-size: 1em;
     font-weight: var(--font-normal);
-    padding-left: (var(--height) * 0.6) + 0.75em;
-    padding-right: 0.75em;
+    padding-left: calc(var(--height) * 0.6) + 0.75em;
+    padding-right: 2rem;
     position: relative;
+    user-select: none;
 }
 
 input[type="checkbox"] + label:before,
@@ -130,13 +127,11 @@ input[type="radio"] + label:before {
     border: solid 1px var(--color-border);
     content: '';
     display: inline-block;
-    height: (var(--height) * 0.6);
-    left: 0;
-    line-height: (var(--height) * 0.575);
-    position: absolute;
+    height: calc(var(--height) * 0.6);
+    line-height: calc(var(--height) * 0.56);
     text-align: center;
-    top: 0;
-    width: (var(--height) * 0.6);
+    width: calc(var(--height) * 0.6);
+    margin-right: 1rem;
 }
 
 input[type="checkbox"]:checked + label:before,
@@ -144,7 +139,7 @@ input[type="radio"]:checked + label:before {
     background: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-bg);
-    content: '\f00c';
+    content: '✓';
 }
 
 input[type="checkbox"]:focus + label:before,
