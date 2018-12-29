@@ -17,6 +17,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/forms.css";
 @import "components/buttons.css";
 @import "components/actions.css";
+@import "components/animations.css";
 
 
 /* Vendor - External imports
