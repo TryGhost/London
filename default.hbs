@@ -23,7 +23,7 @@
     <div class="site-wrapper">
 
         <header class="site-head">
-            <nav class="site-head-left">
+            <nav id="swup" class="site-head-left">
                 {{navigation}}
             </nav>
             <div class="site-head-center">
@@ -47,10 +47,12 @@
         </header>
 
         <main id="site-main" class="site-main">
+            <div id="swup" class="transition-fade">
 
             {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
             {{{body}}}
 
+            </div>
         </main>
 
         {{!-- The footer at the very bottom of the screen --}}
@@ -75,11 +77,18 @@
     </div>
     {{/if}}
 
+    <script src="{{asset "built/swup.js"}}"></script>
+    <script>
+        // Initiate Swup transitions
+        const swup = new Swup();
+    </script>
+
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
+
 
     {{#if pagination.pages}}
     <script>
