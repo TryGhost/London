@@ -1,10 +1,11 @@
 # London
 
-A custom theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/London/releases) page.
+A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world.
 
 &nbsp;
 
-[screenshot]
+![london](https://user-images.githubusercontent.com/120485/50552024-84837400-0c82-11e9-8f1d-cf25962c7e62.jpg)
+
 
 &nbsp;
 
@@ -23,7 +24,7 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `tag.hbs` - Used for tag archives
 - `author.hbs` - Used for author archives
 
-One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
+One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
 - `page-about.hbs` - Custom template for the `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
@@ -32,7 +33,7 @@ One really neat trick is that you can also create custom one-off templates just 
 
 # Development
 
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+London styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 $ yarn install
@@ -52,13 +53,6 @@ $ yarn zip
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 - Variables - Simple pure CSS variables
 - [Color Function](https://github.com/postcss/postcss-color-function)
-
-
-# SVG Icons
-
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
-
-You can add your own SVG icons in the same manner.
 
 
 # Copyright & License
