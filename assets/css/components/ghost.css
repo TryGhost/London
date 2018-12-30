@@ -21,7 +21,7 @@
     font-size: 1.3rem;
     line-height: 1.4em;
     font-weight: 600;
-    color: var(--darkgrey);
+    color: var(--color-base);
     text-align: center;
     opacity: 0.4;
 }
@@ -44,16 +44,19 @@
     transform: translateX(calc(50vw - 50%));
 }
 
-@media (max-width: 800px) {
-    .kg-width-full {
-        width: 100vw;
-    }
-}
-
 .kg-width-full figcaption {
     padding-left: 0;
     padding-right: 0;
     text-align: left;
+}
+
+@media (max-width: 800px) {
+    .kg-width-full {
+        width: 100vw;
+    }
+    .kg-width-full figcaption {
+        padding-left: 6vw;
+    }
 }
 
 .kg-gallery-container {

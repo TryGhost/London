@@ -57,6 +57,23 @@
         "gulp-uglify": "3.0.1"
     },
     "config": {
-        "posts_per_page": 25
+        "posts_per_page": 15,
+        "image_sizes": {
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1200
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
     }
 }

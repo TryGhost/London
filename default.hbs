@@ -23,25 +23,34 @@
     <div class="site-wrapper">
 
         <header class="site-head">
-            <nav id="swup" class="site-head-left">
-                {{navigation}}
-            </nav>
-            <div class="site-head-center">
-                {{#if @blog.logo}}
-                <a class="site-head-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-                {{else}}
-                <a class="site-head-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-                {{/if}}
-            </div>
-            <div class="site-head-right">
-                <div class="social-links">
-                    {{#if @blog.facebook}}
-                    <a href="{{facebook_url @blog.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+            <div class="site-head-container">
+                <a class="nav-burger" href="#">
+                    <div class="hamburger hamburger--collapse" aria-label="Menu" role="button" aria-controls="navigation">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+                <nav id="swup" class="site-head-left">
+                    {{navigation}}
+                </nav>
+                <div class="site-head-center">
+                    {{#if @blog.logo}}
+                    <a class="site-head-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                    {{else}}
+                    <a class="site-head-logo" href="{{@blog.url}}">{{@blog.title}}</a>
                     {{/if}}
-                    {{#if @blog.twitter}}
-                    <a href="{{twitter_url @blog.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                    {{/if}}
-                    <a href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                </div>
+                <div class="site-head-right">
+                    <div class="social-links">
+                        {{#if @blog.facebook}}
+                        <a href="{{facebook_url @blog.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+                        {{/if}}
+                        {{#if @blog.twitter}}
+                        <a href="{{twitter_url @blog.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                        {{/if}}
+                        <a href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -87,6 +96,17 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Mobile Menu Trigger
+            $('.nav-burger').click(function () {
+                $('body').toggleClass('site-head-open');
+            });
+            $('.site-head-open a').click(function () {
+                $('body').removeClass('site-head-open');
+            });
+        });
     </script>
 
 
