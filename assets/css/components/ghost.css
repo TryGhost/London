@@ -92,5 +92,5 @@
 .kg-gallery-card + .kg-gallery-card,
 .kg-image-card.kg-width-wide + .kg-gallery-card,
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
-    margin: -2.25em 0 3em;
+    margin-top: calc( -7vw + 0.75em );
 }
