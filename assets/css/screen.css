@@ -462,10 +462,11 @@ body {
     content: counter(posts);
     position: absolute;
     bottom: -0.15em;
-    right: 4vw;
-    font-size: 30vw;
+    right: 5vw;
+    font-size: 28vw;
     line-height: 1em;
     font-weight: var(--font-heavy);
+    letter-spacing: -0.1em;
     color: rgba(0,0,0,0.2);
 }
 
