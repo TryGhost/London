@@ -442,6 +442,11 @@ body {
 .post-card.with-image .post-card-content {
     opacity: 0;
 }
+@media (max-width: 700px) {
+  .post-card.with-image .post-card-content {
+      opacity: 1;
+  }
+}
 
 .post-card-link:hover .post-card-content {
     opacity: 1;
