@@ -87,16 +87,13 @@
     {{/if}}
 
     <script src="{{asset "built/swup.js"}}"></script>
-    <script>
-        // Initiate Swup transitions
-        const swup = new Swup();
-    </script>
-
+    <script src="{{asset "built/infinitescroll.js"}}"></script>
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
+
     <script>
         $(document).ready(function () {
             // Mobile Menu Trigger
@@ -107,18 +104,15 @@
                 $('body').removeClass('site-head-open');
             });
         });
+
+        // Initiate Swup transitions
+        var swup = new Swup();
+        swup.usePlugin(swupMergeHeadPlugin, { option: true });
+        document.addEventListener('swup:contentReplaced', event => {
+            initInfiniteScroll(window, document);
+        });
     </script>
 
-
-    {{#if pagination.pages}}
-    <script>
-        // maxPages is a global variable that is needed to determine
-        // if we need to load more pages for the infinitescroll, or if
-        // we reached the last page already.
-        var maxPages = parseInt('{{pagination.pages}}');
-    </script>
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
-    {{/if}}
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
