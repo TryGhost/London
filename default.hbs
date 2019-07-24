@@ -106,8 +106,9 @@
         });
 
         // Initiate Swup transitions
-        var swup = new Swup();
-        swup.usePlugin(swupMergeHeadPlugin, { option: true });
+        var swup = new Swup({
+            plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
+        });
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
         });
