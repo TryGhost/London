@@ -109,9 +109,6 @@
             $('.nav-burger').click(function () {
                 $('body').toggleClass('site-head-open');
             });
-            $('.site-head-open a').click(function () {
-                $('body').removeClass('site-head-open');
-            });
         });
 
         // Initiate Swup transitions
@@ -120,6 +117,7 @@
         });
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
+            $('body').removeClass('site-head-open');
         });
     </script>
 
