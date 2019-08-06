@@ -550,6 +550,7 @@ body {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     transform: translateX(calc(50vw - 50%));
+    text-align: center;
 }
 
 .post-content-body {
