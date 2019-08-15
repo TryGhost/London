@@ -1,18 +1,22 @@
-{{!--
+<article class="post-card">
+    <div class="post-header">
+        {{#if feature_image}}
+        <img class="post-image" src="{{img_url feature_image}}" />
+        {{/if}}
+    </div>
+    <h2 class="post-card-title">{{title}}</h2>
+    <p class="post-card-blurb">{{excerpt}}</p>
 
-On every 3rd post, add a special .post-card-large class and load a large image
-For the rest, just output a smaller background image
-
---}}
-
-{{#has number="nth:3"}}
-<article class="post-card {{post_class}} post-card-large {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="xl"}}){{else}}no-image{{/if}}">
-{{else}}
-<article class="post-card {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="l"}}){{else}}no-image{{/if}}">
-{{/has}}
-    <a class="post-card-link" href="{{url}}">
-        <div class="post-card-content">
-            <h2 class="post-card-title">{{title}}</h2>
+    {{#if tags}}
+    <div class="post-card-footer">
+        {{#primary_tag}}
+        <div class="post-card-tag">
+            <img class="post-card-tag-icon" src="{{feature_image}}" />
+            {{name}}
         </div>
-    </a>
+        {{/primary_tag}}
+    </div>
+    {{/if}}
+
+
 </article>

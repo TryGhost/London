@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
 
     {{!-- Document Settings --}}
@@ -18,56 +19,66 @@
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
     <div class="site-wrapper">
 
-        <header class="site-head">
-            <div class="site-head-container">
-                <a class="nav-burger" href="#">
-                    <div class="hamburger hamburger--collapse" aria-label="Menu" role="button" aria-controls="navigation">
-                        <div class="hamburger-box">
-                            <div class="hamburger-inner"></div>
+        <div class="site-content">
+
+            <header class="site-head">
+                <div class="site-head-container">
+                    <a class="nav-burger" href="#">
+                        <div class="hamburger hamburger--collapse" aria-label="Menu" role="button"
+                            aria-controls="navigation">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <nav id="swup" class="site-head-left">
+                        {{navigation}}
+                    </nav>
+                    <div class="site-head-center">
+                        {{#if @site.logo}}
+                        <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}"
+                                alt="{{@site.title}}" /></a>
+                        {{else}}
+                        <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
+                        {{/if}}
+                    </div>
+                    <div class="site-head-right">
+                        <div class="social-links">
+                            {{#if @site.facebook}}
+                            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank"
+                                rel="noopener">Facebook</a>
+                            {{/if}}
+                            {{#if @site.twitter}}
+                            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
+                                rel="noopener">Twitter</a>
+                            {{/if}}
+                            <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS"
+                                target="_blank" rel="noopener">RSS</a>
                         </div>
                     </div>
-                </a>
-                <nav id="swup" class="site-head-left">
-                    {{navigation}}
-                </nav>
-                <div class="site-head-center">
-                    {{#if @site.logo}}
-                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                    <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
                 </div>
-                <div class="site-head-right">
-                    <div class="social-links">
-                        {{#if @site.facebook}}
-                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
-                        {{/if}}
-                        {{#if @site.twitter}}
-                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
-                    </div>
+            </header>
+
+            <main id="site-main" class="site-main">
+                <div id="swup" class="transition-fade">
+
+                    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+                    {{{body}}}
+
                 </div>
-            </div>
-        </header>
+            </main>
 
-        <main id="site-main" class="site-main">
-            <div id="swup" class="transition-fade">
+            {{!-- The footer at the very bottom of the screen --}}
+            <footer class="site-foot">
+                {{@site.title}} &copy; {{date format="YYYY"}}
+            </footer>
 
-            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-            {{{body}}}
-
-            </div>
-        </main>
-
-        {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-foot">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </footer>
+        </div>
 
     </div>
 
@@ -77,10 +88,11 @@
         <a class="subscribe-overlay-close" href="#"></a>
         <div class="subscribe-overlay-content">
             {{#if @site.logo}}
-                <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+            <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
             {{/if}}
             <h1 class="subscribe-overlay-title">Subscribe to {{@site.title}}</h1>
-            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
+                straight to your inbox</p>
             {{subscribe_form placeholder="youremail@example.com"}}
         </div>
     </div>
@@ -88,11 +100,9 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
@@ -122,4 +132,5 @@
     </script>
 
 </body>
+
 </html>

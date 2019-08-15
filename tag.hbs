@@ -1,25 +1,31 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
+<div class="resources-page">
+    <div>
+        <p class="tags-title">Show me...</p>
+        <ul class="resources-page-tags">
+            {{#get 'tags' limit='all'}}
+            {{#foreach tags}}
+            <li class="resources-page-tag">
+                <a href='{{ url }}'>
+                    <img class="resources-tag-icon" src="{{feature_image}}" />
+                    {{name}}
+                </a>
+            </li>
+            {{/foreach}}
+            {{/get}}
+        </ul>
+    </div>
 
-{{#tag}}
-<header class="page-head">
-    <h1 class="page-head-title">{{name}}</h1>
-    <p class="page-head-description">
-        {{#if description}}
-            {{description}}
-        {{else}}
-            A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-        {{/if}}
-    </p>
-</header>
-{{/tag}}
+    <div class="resources-page-resources">
+        <div class="post-feed">
+            {{#foreach posts}}
 
-<div class="post-feed">
-{{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
 
-    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{> "post-card"}}
-
-{{/foreach}}
+            {{/foreach}}
+        </div>
+    </div>
 </div>
