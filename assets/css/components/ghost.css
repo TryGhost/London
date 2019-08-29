@@ -103,10 +103,6 @@
     margin: 5vw 0;
 }
 
-.kg-card + .kg-bookmark-card {
-    margin-top: 0;
-}
-
 .kg-bookmark-container {
     display: flex;
     color: var(--color-base);
