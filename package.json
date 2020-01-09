@@ -44,6 +44,9 @@
     },
     "bugs": "https://github.com/TryGhost/London/issues",
     "contributors": "https://github.com/TryGhost/London/graphs/contributors",
+    "browserslist": [
+        "defaults"
+    ],
     "devDependencies": {
         "autoprefixer": "9.7.3",
         "cssnano": "4.1.10",
