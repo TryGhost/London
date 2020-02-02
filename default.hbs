@@ -43,13 +43,12 @@
                 </div>
                 <div class="site-head-right">
                     <div class="social-links">
-                        {{#if @site.facebook}}
-                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
-                        {{/if}}
-                        {{#if @site.twitter}}
-                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                        <a target="_blank" href="https://twitter.com/NathanG">{{> "icons/twitter"}}</a>
+                        <a target="_blank" href="https://instagram.com/NathanGathright">{{> "icons/instagram"}}</a>
+                        <a target="_blank" href="https://linkedin.com/in/NathanGathright">{{> "icons/linkedin"}}</a>
+                        <a target="_blank" href="https://dribbble.com/NathanG">{{> "icons/dribbble"}}</a>
+                        <a target="_blank" href="https://github.com/NathanGathright">{{> "icons/github"}}</a>
+                        <a target="_blank" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" rel="noopener">{{> "icons/rss"}}</a>
                     </div>
                 </div>
             </div>
