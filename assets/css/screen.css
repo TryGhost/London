@@ -228,6 +228,16 @@ body {
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    margin-right: -8px;
+}
+
+.social-links a {
+    padding: 12px 8px;
+}
+
+.social-links svg {
+    display: block;
+    width: 16px;
 }
 
 .subscribe-button {
@@ -340,10 +350,20 @@ body {
         margin-top: 3vw;
     }
     .social-links {
-        flex-direction: column;
+        margin: 0;
         align-items: flex-start;
     }
 
+    .social-links a {
+        padding: 8px;
+        margin: 0;
+    }
+
+    .social-links svg {
+        display: block;
+        width: 24px;
+    }
+    
     .site-head-open {
         background: rgba(255,255,255,1);
         transition: background 0.5s ease-out;
