@@ -66,7 +66,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 13vw 0;
-    max-width: 70%;
+    max-width: 132ch;
     margin: auto;
     text-align: center;
 }
@@ -195,7 +195,6 @@ body {
 .site-head-logo {
     flex-shrink: 0;
     display: block;
-    padding: 10px;
     color: var(--color-base);
     font-size: 2.1rem;
     line-height: 1em;
@@ -210,9 +209,8 @@ body {
 
 .site-head-logo img {
     display: block;
-    margin-top: 2px;
     width: auto;
-    height: 28px;
+    height: 48px;
 }
 
 .site-head-right {
@@ -293,7 +291,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: 40px;
+        height: 48px;
         background: rgba(255,255,255,0);
         z-index: -1;
         transition: all 0.4s ease-out;
@@ -737,8 +735,6 @@ body {
 /* Page Template
 /* ---------------------------------------------------------- */
 
-.page-template .post-content-body h1,
-.page-template .post-content-body h2,
-.page-template .post-content-body h3 {
+.page-template .post-content-body h1 {
     text-align: center;
 }
