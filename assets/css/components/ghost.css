@@ -119,7 +119,7 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: flex-start;
-    justify-content: start;
+    justify-content: flex-start;
     background: #fff;
     padding: calc(1.75 * var(--margin));
 }
