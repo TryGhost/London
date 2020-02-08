@@ -25,7 +25,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: var(--font-sans-serif);
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
@@ -65,8 +65,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 13vw 0;
-    max-width: 132ch;
+    padding: 8vw 0;
+    max-width: 124ch;
     margin: auto;
     text-align: center;
 }
@@ -100,6 +100,8 @@ body {
     margin: 0;
     font-size: 4.2rem;
     color: var(--color-base);
+    font-family: var(--font-serif);
+    font-weight: var(--font-normal);
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -414,6 +416,9 @@ body {
 .post-feed {
     display: flex;
     flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem; */
 }
 
 .post-card {
@@ -455,9 +460,17 @@ body {
     bottom: 0;
     left: 0;
     color: #fff;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.5);
     opacity: 1;
     transition: opacity 0.5s cubic-bezier(.33,0,.2,1);
+    
+}
+
+@supports (backdrop-filter: none) {
+	.post-card-content {
+        background: transparent;
+		backdrop-filter: blur(1.5rem) brightness(75%);
+	}
 }
 
 .post-card.with-image .post-card-content {
@@ -477,6 +490,8 @@ body {
 .post-card-title {
     margin: 0;
     display: inline-block;
+    font-family: var(--font-serif);
+    font-weight: var(--font-normal);
     font-size: 3.4rem;
     max-width: 70%;
     text-align: center;
@@ -542,6 +557,8 @@ body {
 .post-content-title {
     margin: 0 0 3vw;
     color: var(--color-base);
+    font-family: var(--font-serif);
+    font-weight: var(--font-normal);
     text-align: center;
 }
 
