@@ -11,11 +11,10 @@ into the {body} of the default.hbs template --}}
 {{/is}}
 
 <div class="post-feed">
+    {{#get "posts" filter="tag:portfolio"}}
     {{#foreach posts}}
-
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card"}}
-
+            {{> "post-card"}}
     {{/foreach}}
+    {{/get}}
 </div>
 
