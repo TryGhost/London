@@ -1,0 +1,17 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+ <header class="page-head">
+    <h1 class="page-head-title">Blog</h1>
+    <p class="page-head-description">The writing of Nathan Gathright</p>
+</header>
+
+<div class="post-feed">
+    {{#get "posts" filter="tag:blog"}}
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    {{/get}}
+</div>
+
