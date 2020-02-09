@@ -43,12 +43,12 @@
                 </div>
                 <div class="site-head-right">
                     <div class="social-links">
-                        <a target="_blank" href="https://twitter.com/NathanG">{{> "icons/twitter"}}</a>
-                        <a target="_blank" href="https://instagram.com/NathanGathright">{{> "icons/instagram"}}</a>
-                        <a target="_blank" href="https://linkedin.com/in/NathanGathright">{{> "icons/linkedin"}}</a>
-                        <a target="_blank" href="https://dribbble.com/NathanG">{{> "icons/dribbble"}}</a>
-                        <a target="_blank" href="https://github.com/NathanGathright">{{> "icons/github"}}</a>
-                        <a target="_blank" href="{{@site.url}}/rss/" title="RSS" rel="noopener">{{> "icons/rss"}}</a>
+                        <a target="_blank" rel="noopener" href="https://twitter.com/NathanG">{{> "icons/twitter"}}</a>
+                        <a target="_blank" rel="noopener" href="https://instagram.com/NathanGathright">{{> "icons/instagram"}}</a>
+                        <a target="_blank" rel="noopener" href="https://linkedin.com/in/NathanGathright">{{> "icons/linkedin"}}</a>
+                        <a target="_blank" rel="noopener" href="https://dribbble.com/NathanG">{{> "icons/dribbble"}}</a>
+                        <a target="_blank" rel="noopener" href="https://github.com/NathanGathright">{{> "icons/github"}}</a>
+                        <a target="_blank" rel="noopener" href="{{@site.url}}/rss/" title="RSS" rel="noopener">{{> "icons/rss"}}</a>
                     </div>
                 </div>
             </div>
@@ -87,11 +87,6 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
@@ -103,12 +98,12 @@
 
     {{!-- Handle swup content replacement --}}
     <script data-swup-ignore-script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function(){
             // Mobile Menu Trigger
-            $('.nav-burger').click(function () {
-                $('body').toggleClass('site-head-open');
+            document.querySelector('.nav-burger').addEventListener("click", function(){
+                document.body.classList.toggle('site-head-open');
             });
-        });
+        }, false);
 
         // Initiate Swup transitions
         var swup = new Swup({
@@ -116,7 +111,7 @@
         });
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
-            $('body').removeClass('site-head-open');
+            document.body.classList.remove('site-head-open');
         });
     </script>
 
