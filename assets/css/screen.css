@@ -9,6 +9,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 @import "vars.css";
+@import "components/fonts.css";
 @import "components/global.css";
 @import "components/ghost.css";
 @import "components/lists.css";
@@ -66,7 +67,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 8vw 0;
-    max-width: 124ch;
     margin: auto;
     text-align: center;
 }
@@ -100,8 +100,9 @@ body {
     margin: 0;
     font-size: 4.2rem;
     color: var(--color-base);
-    font-family: var(--font-serif);
-    font-weight: var(--font-normal);
+    font-family: var(--font-headline);
+    font-weight: 600;
+    max-width: 32ch;
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -178,7 +179,9 @@ body {
     margin: 0;
     padding: 10px 12px;
     color: var(--color-base);
-    font-weight: 600;
+    font-family: var(--font-sans-serif);
+    font-weight: 400;
+    letter-spacing: 0.025em;
     opacity: 0.4;
 }
 
@@ -238,6 +241,7 @@ body {
 .social-links svg {
     display: block;
     width: 16px;
+    fill: currentColor;
 }
 
 .subscribe-button {
@@ -433,7 +437,7 @@ body {
     counter-increment: posts;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .post-card {
         flex: 1 1 100%;
         height: 70vw;
@@ -469,14 +473,14 @@ body {
 @supports (backdrop-filter: none) {
 	.post-card-content {
         background: transparent;
-		backdrop-filter: blur(1.5rem) brightness(75%);
+		backdrop-filter: brightness(75%) contrast(75%);
 	}
 }
 
 .post-card.with-image .post-card-content {
     opacity: 0;
 }
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .post-card.with-image .post-card-content {
       opacity: 1;
   }
@@ -490,8 +494,8 @@ body {
 .post-card-title {
     margin: 0;
     display: inline-block;
-    font-family: var(--font-serif);
-    font-weight: var(--font-normal);
+    font-family: var(--font-headline);
+    font-weight: 600;
     font-size: 3.4rem;
     max-width: 70%;
     text-align: center;
@@ -533,7 +537,7 @@ body {
         font-size: 3.4rem;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .post-card.no-image:before {
         font-size: 50vw;
     }
@@ -557,8 +561,8 @@ body {
 .post-content-title {
     margin: 0 0 3vw;
     color: var(--color-base);
-    font-family: var(--font-serif);
-    font-weight: var(--font-normal);
+    font-family: var(--font-headline);
+    font-weight: 600;
     text-align: center;
 }
 
@@ -615,12 +619,17 @@ body {
 
 .post-content-body iframe {
     margin: 0 auto !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .post-content-body blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: var(--color-primary);
 }
 
 .post-content-body blockquote p {
