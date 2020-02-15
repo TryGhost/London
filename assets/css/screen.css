@@ -369,9 +369,6 @@ body {
     }
     
     .site-head-open {
-        background: rgba(255,255,255,1);
-        transition: background 0.5s ease-out;
-        transition-delay: 0.25;
         overflow: hidden;
         height: 100vh;
     }
