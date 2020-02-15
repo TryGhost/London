@@ -277,14 +277,14 @@ body {
 
 ::selection {
     text-shadow: none;
-    background: hsla(246, 100%, 50%, .1);
-    color: hsla(246, 100%, 50%, 1);
+    background: #ffe592;
+    color: #685417;
 }
 
 .selection {
     text-shadow: none;
-    background: hsla(246, 100%, 50%, .1);
-    color: hsla(246, 100%, 50%, 1);
+    background: #ffe592;
+    color: #685417;
 }
 
 hr {
