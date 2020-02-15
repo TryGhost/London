@@ -609,6 +609,14 @@ body {
     color: var(--color-base);
 }
 
+.post-content-body p a {
+    text-decoration: underline;
+}
+
+.post-content-body p a:hover {
+    text-decoration: none;
+}
+
 .post-content-body li {
     word-break: break-word;
 }
