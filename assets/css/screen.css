@@ -20,6 +20,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/actions.css";
 @import "components/hamburger.css";
 @import "components/animations.css";
+@import "components/logo-video.css";
 
 
 /* Main - Theme styles
@@ -243,15 +244,15 @@ body {
     text-decoration: none;
 }
 
-.site-head-logo img {
-    display: block;
-    width: 192px;
-    height: auto;
+.site-head-logo {
+    display: none;
 }
 
 @media (max-width: 850px) {
-    .site-head-logo img {
+    .site-head-logo {
         width: 92px;
+        display: block;
+        height: auto;
     }
 }
 

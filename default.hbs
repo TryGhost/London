@@ -37,9 +37,14 @@
                 <div class="site-head-center">
                     {{#if @site.logo}}
                     <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                    <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
                     {{/if}}
+                    <div class="site-logo__wrapper">
+                        <div class="site-logo__element">
+                            <video class="site-logo__video" autoplay muted playsinline onclick="play()" poster="{{asset "media/brand.gif"}}">
+                                <source src="{{asset "media/brand.mp4"}}">
+                            </video>
+                        </div>
+                    </div>
                 </div>
                 <div class="site-head-right">
                     <div class="social-links">
