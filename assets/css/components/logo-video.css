@@ -30,6 +30,18 @@
     cursor: -webkit-image-set(url("/assets/media/refresh.png") 1x, url("/assets/media/refresh@2x.png") 2x) 0 0, pointer;
 }
 
+.site-logo__element:after {
+    content: "";
+    width: 150%;
+    top: -37.5%;
+    left: -25%;
+    height: 175%;
+    position: absolute;
+    background: var(--color-bg);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
 .site-logo__video {
     width: calc(100% * var(--exteriorWidth) / var(--interiorWidth));
     top: var(--topOffset);
