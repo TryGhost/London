@@ -660,13 +660,12 @@ body {
     color: var(--color-base);
 }
 
-.post-content-body p a {
+.post-content-body a:not(.button) {
     text-decoration: underline;
     text-decoration-color: var(--color-accent);
-
 }
 
-.post-content-body p a:hover {
+.post-content-body a:not(.button) a:hover {
     text-decoration-color: unset;
 }
 
