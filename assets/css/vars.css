@@ -5,6 +5,7 @@
 
     /* Colours */
     --color-primary: #333;
+    --color-accent: #fabe01;
     --color-base: #111;
     --color-border: hsla(0, 0%, 85%, 1);
     --color-bg: hsl(43, 28%, 90%);
