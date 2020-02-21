@@ -40,6 +40,13 @@
 
     </footer>
 
+    {{!-- Email subscribe form at the bottom of the page --}}
+    {{#if @labs.members }}
+        {{#unless @member}}
+            {{> subscribe-form}}
+        {{/unless}}
+    {{/if}}
+
     {{!--
     <section class="post-content-comments">
         If you want to embed comments, this is a good place to do it!
