@@ -7,43 +7,50 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   padding: 0 .125em;
+
+  &:hover, 
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    animation: bounceInline .4s cubic-bezier(0,.5,.5,1) infinite alternate;
+  }
+
+  &:active {
+    color: transparent;
+  }
 }
 
-.post-content-body a:not(.button):hover {
-  text-decoration: none;
-  animation: bounceInline .4s cubic-bezier(0,.5,.5,1) infinite alternate;
-}
+.site-head-left a {
 
-.site-head-left a:hover {
-  background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="14px" y1="70%" x2="calc(100% - 14px)" y2="70%" /></svg>');
-  background-position: center bottom 3px;
-  background-repeat: no-repeat;
-  animation: bounceMenu .4s cubic-bezier(0,.5,.5,1) infinite alternate;
-}
+  &:hover, 
+  &:focus {
+    outline: none;
+    opacity: 1;
+    background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="14px" y1="70%" x2="calc(100% - 14px)" y2="70%" /></svg>');
+    background-position: center bottom 3px;
+    background-repeat: no-repeat;
+    animation: bounceMenu .4s cubic-bezier(0,.5,.5,1) infinite alternate;
+  }
 
-.site-head-left a:before {
-  position: absolute;
-  z-index: -1;
-  display: block;
-  content: "";
-}
+  &:active {
+    color: transparent;
+  }
 
-.site-head-left a:hover, 
-.site-head-left a:focus {
-  outline: none;
-}
+  &:before {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: "";
+  }
 
-.site-head-left a:active {
-  color: transparent;
-}
-
-.site-head-left a:active:before {
-  top: auto;
-  right: -0.75em;
-  bottom: 0.25em;
-  left: -0.75em;
-  height: calc(50% + 0.375em);
-  animation: pop .4s linear infinite;
+  &:active:before {
+    top: auto;
+    right: -0.33em;
+    bottom: 0.25em;
+    left: -0.33em;
+    height: calc(50% + 0.375em);
+    animation: pop .4s linear infinite;
+  }
 }
 
 @keyframes bounceInline {

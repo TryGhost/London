@@ -61,7 +61,8 @@
         "gulp-zip": "5.0.1",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "8.0.11",
-        "postcss-easy-import": "3.0.0"
+        "postcss-easy-import": "3.0.0",
+        "postcss-nested": "^4.2.1"
     },
     "config": {
         "posts_per_page": 15,
