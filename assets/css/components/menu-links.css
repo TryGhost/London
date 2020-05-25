@@ -2,34 +2,30 @@
   https://codepen.io/nathangath/pen/WNQjMMR
 */
 
-/* a {
-  display: inline-block;
-  text-decoration: none;
-  color: #262626;
-  position: relative;
-  margin: 0 .25em;
-  border-radius: .25em;
-  transition: all .4s ease-out;
-} */
-
 .post-content-body a:not(.button) {
-  background: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="4px" y1="80%" x2="calc(100% - 4px)" y2="80%" /></svg>') left no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="4px" y1="80%" x2="calc(100% - 4px)" y2="80%" /></svg>');
+  background-position: center bottom;
+  background-repeat: no-repeat;
   padding: 0 .125em;
 }
 
 .post-content-body a:not(.button):hover {
   text-decoration: none;
-  animation: bounce .4s cubic-bezier(0.5, 0.05, 1, 0.5) infinite alternate;
+  animation: bounceInline .4s cubic-bezier(0,.5,.5,1) infinite alternate;
 }
 
-.site-head-left a:before, 
-.site-head-left a:after {
+.site-head-left a:hover {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="14px" y1="70%" x2="calc(100% - 14px)" y2="70%" /></svg>');
+  background-position: center bottom 3px;
+  background-repeat: no-repeat;
+  animation: bounceMenu .4s cubic-bezier(0,.5,.5,1) infinite alternate;
+}
+
+.site-head-left a:before {
   position: absolute;
   z-index: -1;
   display: block;
   content: "";
-  border-radius: 999px;
-  background: var(--color-accent);
 }
 
 .site-head-left a:hover, 
@@ -37,44 +33,36 @@
   outline: none;
 }
 
-.site-head-left a:hover:after, 
-.site-head-left a:focus:after {
-  top: auto;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
-  height: 20%;
-  animation: pulse .4s ease infinite alternate;
-}
-
-.site-head-left a.ispopping {
+.site-head-left a:active {
   color: transparent;
 }
 
-.site-head-left a.ispopping:before {
+.site-head-left a:active:before {
   top: auto;
   right: -0.75em;
-  bottom: -0.25em;
+  bottom: 0.25em;
   left: -0.75em;
   height: calc(50% + 0.375em);
   animation: pop .4s linear infinite;
 }
 
-.site-head-left a.ispopping:after {
-  top: auto;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  opacity: 0;
-}
-
-@keyframes bounce {
+@keyframes bounceInline {
   from {
     background-position: center bottom;
   }
 
   to {
     background-position: center bottom 4px;
+  }
+}
+
+@keyframes bounceMenu {
+  from {
+    background-position: center bottom 3px;
+  }
+
+  to {
+    background-position: center bottom 5px;
   }
 }
 
