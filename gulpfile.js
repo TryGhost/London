@@ -14,6 +14,7 @@ var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
+var nested = require('postcss-nested');
 
 function serve(done) {
     livereload.listen();
@@ -39,6 +40,7 @@ function hbs(done) {
 function css(done) {
     var processors = [
         easyimport,
+        nested,
         customProperties({preserve: false}),
         colorFunction(),
         autoprefixer(),

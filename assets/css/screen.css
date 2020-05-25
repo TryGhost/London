@@ -21,8 +21,8 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/hamburger.css";
 @import "components/animations.css";
 @import "components/logo-video.css";
+@import "components/menu-links.css";
 @import "components/subscribe.css";
-
 
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
@@ -186,36 +186,6 @@ body {
     letter-spacing: 0.025em;
     opacity: 0.4;
     position: relative;
-}
-
-.site-head-left a:after,
-.site-head-right a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    left: 8px;
-    background:var(--color-accent);
-    width: 0;
-    height: 100%;
-    z-index: -1;
-    max-width: calc(100% - 16px);
-    max-height: calc(100% - 20px);
-    transform: skewX(-9deg) skewY(-3deg);
-    transition: all 0.2s cubic-bezier(.33,0,.2,1);
-    border-radius: 2px;
-}
-
-.social-links a:after {
-    bottom: 8px;
-    left: 2px;
-    max-width: calc(100% - 4px);
-    max-height: calc(100% - 16px);
-}
-
-.site-head-left a:hover:after,
-.site-head-right a:hover:after {
-    width: 100%;
 }
 
 .nav-current a,
@@ -659,15 +629,6 @@ body {
 .post-content-body h5,
 .post-content-body h6 {
     color: var(--color-base);
-}
-
-.post-content-body a:not(.button) {
-    text-decoration: underline;
-    text-decoration-color: var(--color-accent);
-}
-
-.post-content-body a:not(.button) a:hover {
-    text-decoration-color: unset;
 }
 
 .post-content-body li {
