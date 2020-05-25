@@ -1,0 +1,221 @@
+/* 
+  https://codepen.io/nathangath/pen/WNQjMMR
+*/
+
+.post-content-body a:not(.button) {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="4px" y1="80%" x2="calc(100% - 4px)" y2="80%" /></svg>');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 0 .125em;
+
+  &:hover, 
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    animation: bounceInline .4s cubic-bezier(0,.5,.5,1) infinite alternate;
+  }
+
+  &:active {
+    color: transparent;
+  }
+}
+
+.site-head-left a {
+
+  &:hover, 
+  &:focus {
+    outline: none;
+    opacity: 1;
+    background-image: url('data:image/svg+xml;utf8,<svg stroke-width="8" stroke="%23fabe01" fill="none" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="14px" y1="70%" x2="calc(100% - 14px)" y2="70%" /></svg>');
+    background-position: center bottom 3px;
+    background-repeat: no-repeat;
+    animation: bounceMenu .4s cubic-bezier(0,.5,.5,1) infinite alternate;
+  }
+
+  &:active {
+    color: transparent;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: "";
+  }
+
+  &:active:before {
+    top: auto;
+    right: -0.33em;
+    bottom: 0.25em;
+    left: -0.33em;
+    height: calc(50% + 0.375em);
+    animation: pop .4s linear infinite;
+  }
+}
+
+@keyframes bounceInline {
+  from {
+    background-position: center bottom;
+  }
+
+  to {
+    background-position: center bottom 4px;
+  }
+}
+
+@keyframes bounceMenu {
+  from {
+    background-position: center bottom 3px;
+  }
+
+  to {
+    background-position: center bottom 5px;
+  }
+}
+
+@keyframes pulse {
+  from {
+    bottom: 12px;
+    height: 25%;
+    box-shadow: 0 0 0 0 var(--color-accent), 0 0 0 0 var(--color-accent);
+  }
+
+  to {
+    bottom: 10px;
+    height: 20%;
+    box-shadow: .25em 0 0 0 var(--color-accent), -.25em 0 0 0 var(--color-accent);
+
+  }
+}
+
+@keyframes pop {
+  0% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="0" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  8.3333333333% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  16.6666666667% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  25% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-0.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  33.3333333333% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  41.6666666667% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  50% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  58.3333333333% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-1.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  66.6666666667% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  75% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.25" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  83.3333333333% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.5" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+
+  91.6666666667% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-2.75" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+  
+  100% {
+    background: 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="8" x2="1" y2="8" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="8" x2="7" y2="8"/></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="4" x2="4" y2="1" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="4" x2="4" y2="1" /></svg>') right no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="12" x2="4" y2="15" /></svg>') left no-repeat, 
+    url('data:image/svg+xml;utf8,<svg stroke-dashoffset="-3" stroke-dasharray="1 4" stroke-width="2" stroke="%23fabe01" fill="none" viewBox="0 0 8 16" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="12" x2="4" y2="15" /></svg>') right no-repeat;
+  }
+}
