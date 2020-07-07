@@ -113,7 +113,11 @@
 
         // Initiate Swup transitions
         var swup = new Swup({
-            plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
+            plugins: [
+                new SwupHeadPlugin(),
+                new SwupScriptsPlugin(),
+                new SwupScrollPlugin(animateScroll: false)
+            ],
         });
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
