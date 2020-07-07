@@ -116,7 +116,7 @@
             plugins: [
                 new SwupHeadPlugin(),
                 new SwupScriptsPlugin(),
-                new SwupScrollPlugin(animateScroll: false)
+                new SwupScrollPlugin({animateScroll: false})
             ],
         });
         document.addEventListener('swup:contentReplaced', event => {
