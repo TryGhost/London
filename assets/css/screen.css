@@ -654,8 +654,8 @@ body {
     margin-left: -10px;
     width: 1px;
     height: 30px;
-    background: color(var(--color-border) l(+10%));
-    box-shadow: #fff 0 0 0 5px;
+    background: color(var(--color-border) l(+5%));
+    box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
 }
 
