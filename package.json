@@ -59,7 +59,7 @@
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.2",
-        "postcss": "8.1.1",
+        "postcss": "8.1.2",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "10.0.0",
         "postcss-easy-import": "3.0.0"
