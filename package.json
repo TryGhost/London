@@ -48,7 +48,7 @@
         "defaults"
     ],
     "devDependencies": {
-        "autoprefixer": "10.2.0",
+        "autoprefixer": "10.2.1",
         "cssnano": "4.1.10",
         "gscan": "3.6.1",
         "gulp": "4.0.2",
@@ -59,7 +59,7 @@
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.2",
-        "postcss": "8.2.2",
+        "postcss": "8.2.4",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "10.0.0",
         "postcss-easy-import": "3.0.0"
