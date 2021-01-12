@@ -3988,12 +3988,11 @@ postcss-convert-values@^4.0.1:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-custom-properties@10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-10.0.0.tgz#5cb31afc530f58ad241f1e836dd5f5f7065334df"
-  integrity sha512-55BPj5FudpCiPZzBaO+MOeqmwMDa+nV9/0QBJBfhZjYg6D9hE+rW9lpMBLTJoF4OTXnS5Po4yM1nMlgkPbCxFg==
+postcss-custom-properties@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-11.0.0.tgz#f98cd192cd8dfcd8afa3baa1ad5b5d91d01292f3"
+  integrity sha512-Fhnx/QLt+CTt23A/KKVx1anZD9nmVpOxKCKv5owWacMoOsBXFhMAD6SZYbmPMH4nHdIeMUnWOvLZnlY4niS0sA==
   dependencies:
-    postcss "^7.0.17"
     postcss-values-parser "^4.0.0"
 
 postcss-discard-comments@^4.0.2:
@@ -4308,7 +4307,7 @@ postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.23:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.17, postcss@^7.0.27, postcss@^7.0.5:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.27, postcss@^7.0.5:
   version "7.0.32"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
   integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
