@@ -80,17 +80,6 @@ button,
     box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover,
-.button:hover {
-    text-decoration: none;
-    color: color(var(--color-primary) l(-15%)) !important;
-    box-shadow: inset 0 0 0 2px color(var(--color-primary) l(-10%));
-    transition: 0.2s ease;
-}
-
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
@@ -100,11 +89,3 @@ button.primary,
     background-color: var(--color-primary);
     box-shadow: none;
 }
-
-input[type="submit"].primary:hover,
-input[type="reset"].primary:hover,
-input[type="button"].primary:hover,
-button.primary:hover,
-.button.primary:hover {
-        background-color: color(var(--color-primary) l(-10%));
-    }
