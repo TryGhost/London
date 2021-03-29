@@ -6,7 +6,7 @@
 :root {
 
     /* Colours */
-    --color-primary: #3eb0ef;
+    --color-primary: var(--ghost-accent-color, #3eb0ef);
     --color-base: #131313;
     --color-border: #ddd;
     --color-bg: #f8f8f8;
