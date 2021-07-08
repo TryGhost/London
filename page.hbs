@@ -8,9 +8,12 @@
     </header>
 
     {{#if feature_image}}
-    <div class="post-content-image">
-        <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
-    </div>
+    <figure class="post-content-image">
+        <img class="kg-image" src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+        {{#if feature_image_caption}}
+            <figcaption>{{feature_image_caption}}</figcaption>
+        {{/if}}
+    </figure>
     {{/if}}
 
     <div class="post-content-body">
