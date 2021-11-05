@@ -25,7 +25,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: var(--font-sans-serif);
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
@@ -100,6 +100,9 @@ body {
     margin: 0;
     font-size: 4.2rem;
     color: var(--color-base);
+}
+.has-serif-title .page-head-title {
+    font-family: var(--font-serif);
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -464,6 +467,9 @@ body {
     text-align: center;
     transition: all 0.3s cubic-bezier(.33,0,.2,1);
 }
+.has-serif-title .post-card-title {
+    font-family: var(--font-serif);
+}
 
 /* Posts without images */
 .post-card.no-image:before {
@@ -523,8 +529,12 @@ body {
 
 .post-content-title {
     margin: 0 0 3vw;
+    line-height: 1.1;
     color: var(--color-base);
     text-align: center;
+}
+.has-serif-title .post-content-title {
+    font-family: var(--font-serif);
 }
 
 .post-content-excerpt {
@@ -534,6 +544,9 @@ body {
     color: var(--color-base);
     text-align: center;
     opacity: 0.5;
+}
+.has-serif-body .post-content-excerpt {
+    font-family: var(--font-serif);
 }
 @media (max-width: 500px) {
     .post-content-excerpt {
@@ -568,6 +581,15 @@ body {
 .post-content-body h5,
 .post-content-body h6 {
     color: var(--color-base);
+}
+
+.has-serif-title .post-content-body h1,
+.has-serif-title .post-content-body h2,
+.has-serif-title .post-content-body h3,
+.has-serif-title .post-content-body h4,
+.has-serif-title .post-content-body h5,
+.has-serif-title .post-content-body h6 {
+    font-family: var(--font-serif);
 }
 
 .post-content-body li {
@@ -657,6 +679,14 @@ body {
     background: color(var(--color-border) l(+5%));
     box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
+}
+
+.has-serif-body .post-content-body > blockquote,
+.has-serif-body .post-content-body > ol,
+.has-serif-body .post-content-body > ul,
+.has-serif-body .post-content-body > dl,
+.has-serif-body .post-content-body > p {
+    font-family: var(--font-serif);
 }
 
 .footnotes-sep {
