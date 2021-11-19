@@ -106,10 +106,10 @@
   dependencies:
     long-timeout "^0.1.1"
 
-"@tryghost/config@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tryghost/config/-/config-0.2.0.tgz#2de5afec7866e9277f8fc044c4009a2167e3490a"
-  integrity sha512-8s2NZOzufDYiAmOGCT0aIXrmdSbHTY1kybNYIcyjPI1/UuF7WMCMhMfRvRgrOl8UROep9fVgdRhDGTn41W+5ZA==
+"@tryghost/config@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tryghost/config/-/config-0.2.1.tgz#49cac52281d9cc05fdb22033e5378989ed0923ce"
+  integrity sha512-VQVMjjgqEoDX3jtb1wsr/p8I0+lnt6Xo5WDVcuiHAQePBLIP79fZcnq7UkdexAjiotWW2OwbYwIxfFNxQAsdWA==
   dependencies:
     "@tryghost/root-utils" "^0.3.7"
     nconf "^0.11.3"
@@ -1032,10 +1032,10 @@ commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-common-tags@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.1.tgz#ebf4973edf7d476a9c19646f5f04a45f95796029"
-  integrity sha512-uOZd85rJqrdEIE/JjhW5YAeatX8iqjjvVzIyfx7JL7G5r9Tep6YpYT9gEJWhWpVyDQEyzukWd6p2qULpJ8tmBw==
+common-tags@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.2.tgz#94ebb3c076d26032745fd54face7f688ef5ac9c6"
+  integrity sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==
 
 component-emitter@^1.2.1:
   version "1.3.0"
@@ -2168,13 +2168,13 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-gscan@4.10.2:
-  version "4.10.2"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.10.2.tgz#398f2e241da02d3e2c346ade5c8e8dff0d63f3a3"
-  integrity sha512-Mk7QpvY5WI90RdVxPIOR4yP7VXnhXsbbD8UzB5KkgIX/msQ1r/g770chf/MoES7eBn/b4necXN/vwgaGTnbzdQ==
+gscan@4.10.3:
+  version "4.10.3"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.10.3.tgz#baaf2025ed64b6d9cece73cc267b5d48a0817a98"
+  integrity sha512-2XlL5aw1Y/C8vzZyLIBenSr5upASd7ubK3l2kl862tMqJ40c9GfBbW5Y1061kaacSLVRcdwqZnM7VmolG1lRtA==
   dependencies:
     "@sentry/node" "6.15.0"
-    "@tryghost/config" "0.2.0"
+    "@tryghost/config" "0.2.1"
     "@tryghost/debug" "0.1.9"
     "@tryghost/ignition-errors" "0.1.8"
     "@tryghost/logging" "1.0.0"
@@ -2183,7 +2183,7 @@ gscan@4.10.2:
     "@tryghost/zip" "1.1.18"
     bluebird "3.7.2"
     chalk "4.1.2"
-    common-tags "1.8.1"
+    common-tags "1.8.2"
     express "4.17.1"
     express-hbs "2.4.0"
     fs-extra "9.1.0"
