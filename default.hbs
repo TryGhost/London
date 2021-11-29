@@ -93,6 +93,7 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
+    <script src="{{asset "built/reframe.min.js"}}" data-swup-ignore-script></script>
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -126,6 +127,21 @@
             $('body').removeClass('site-head-open');
         });
     </script>
+
+    {{#is "post, page"}}
+        <script>
+            const sources = [
+                '.gh-content iframe[src*="youtube.com"]',
+                '.gh-content iframe[src*="youtube-nocookie.com"]',
+                '.gh-content iframe[src*="player.vimeo.com"]',
+                '.gh-content iframe[src*="kickstarter.com"][src*="video.html"]',
+                'object',
+                'embed',
+            ];
+
+            reframe(document.querySelectorAll(sources.join(',')));
+        </script>
+    {{/is}}
 
 </body>
 </html>
