@@ -1,8 +1,17 @@
 /* Styling for Ghost-specific elements
 /* ---------------------------------------------------------- */
 
-.kg-card {
-    margin: 7vw 0;
+.kg-toggle-heading-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.has-serif-title .kg-toggle-heading-text {
+    font-family: var(--font-serif);
+}
+
+.kg-toggle-content > * + * {
+    margin: 2.4rem 0 0;
 }
 
 .kg-embed-card {
@@ -97,10 +106,6 @@ figcaption {
 .kg-image-card.kg-width-wide + .kg-gallery-card,
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin-top: calc( -7vw + 0.75em );
-}
-
-.kg-bookmark-card {
-    margin: 5vw 0;
 }
 
 .kg-bookmark-container {
