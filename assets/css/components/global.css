@@ -338,7 +338,7 @@ blockquote cite a {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-base);
     text-decoration: none;
     transition: 0.4s ease;
 }
