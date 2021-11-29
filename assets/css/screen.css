@@ -604,21 +604,21 @@ is the very first element in the post content */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: 4.8rem;
+    margin-top: 6.4rem;
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: 4.8rem;
+    margin-top: 6.4rem;
 }
 
 /* Cards */
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 4.8rem;
+    margin-top: 6.4rem;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-    margin-top: 4.8rem;
+    margin-top: 6.4rem;
 }
 
 /* Now the content typography styles */
@@ -746,10 +746,6 @@ is the very first element in the post content */
     margin: 1.5em 0 3em;
 }
 
-.post-content-body hr {
-    margin: 4vw 0;
-}
-
 .post-content-body hr:after {
     content: "";
     position: absolute;
@@ -762,14 +758,6 @@ is the very first element in the post content */
     background: color(var(--color-border) l(+5%));
     box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
-}
-
-.has-serif-body .post-content-body > blockquote,
-.has-serif-body .post-content-body > ol,
-.has-serif-body .post-content-body > ul,
-.has-serif-body .post-content-body > dl,
-.has-serif-body .post-content-body > p {
-    font-family: var(--font-serif);
 }
 
 .footnotes-sep {
