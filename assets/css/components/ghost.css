@@ -1,9 +1,14 @@
 /* Styling for Ghost-specific elements
 /* ---------------------------------------------------------- */
 
-.kg-toggle-heading-text {
-    font-size: 2rem;
+.kg-toggle-card .kg-toggle-heading-text {
+    font-size: 1.8rem;
     font-weight: 700;
+}
+
+.kg-toggle-card-icon {
+    padding: 0;
+    box-shadow: none;
 }
 
 .has-serif-title .kg-toggle-heading-text {
@@ -14,6 +19,10 @@
     margin: 2.4rem 0 0;
 }
 
+.kg-callout-card-accent a {
+    text-decoration: underline;
+}
+
 .kg-embed-card {
     display: flex;
     flex-direction: column;
@@ -22,8 +31,8 @@
 }
 
 .kg-image {
-    max-width: 100%;
-    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 figcaption {

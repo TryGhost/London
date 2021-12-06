@@ -108,6 +108,7 @@ table {
     border-collapse: collapse;
 }
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -300,11 +301,6 @@ img,
 svg,
 video {
     vertical-align: middle;
-}
-
-p,
-blockquote {
-    margin: 0 0 1.5em 0;
 }
 
 blockquote {

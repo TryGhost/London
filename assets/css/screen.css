@@ -622,7 +622,7 @@ is the very first element in the post content */
 }
 
 /* Now the content typography styles */
-.gh-content a:not(.gh-post-upgrade-cta a):not(.kg-bookmark-container):not(.kg-btn):not(.kg-nft-card-container) {
+.gh-content a:not(.gh-post-upgrade-cta a):not(.kg-bookmark-container):not(.kg-btn):not(.kg-nft-card-container):not(.kg-callout-card-accent a) {
     color: var(--ghost-accent-color);
     text-decoration: underline;
     word-break: break-word;
@@ -631,13 +631,16 @@ is the very first element in the post content */
 .gh-content > ol,
 .gh-content > ul,
 .gh-content > dl,
-.gh-content > p,
-.kg-callout-text,
-.kg-toggle-content > ol,
-.kg-toggle-content > ul,
-.kg-toggle-content > p {
+.gh-content > p {
     font-size: 1.9rem;
     line-height: 1.6;
+}
+
+.gh-content .kg-callout-text,
+.gh-content .kg-toggle-content > ol,
+.gh-content .kg-toggle-content > ul,
+.gh-content .kg-toggle-content > p {
+    font-size: 1.7rem;
 }
 
 @media (max-width: 500px) {
@@ -645,10 +648,10 @@ is the very first element in the post content */
     .gh-content > ul,
     .gh-content > dl,
     .gh-content > p,
-    .kg-callout-text,
-    .kg-toggle-content > ol,
-    .kg-toggle-content > ul,
-    .kg-toggle-content > p {
+    .gh-content .kg-callout-text,
+    .gh-content .kg-toggle-content > ol,
+    .gh-content .kg-toggle-content > ul,
+    .gh-content .kg-toggle-content > p {
         font-size: 1.7rem;
     }
 }
@@ -658,10 +661,10 @@ is the very first element in the post content */
 .has-serif-body .gh-content > ul,
 .has-serif-body .gh-content > dl,
 .has-serif-body .gh-content > p,
-.has-serif-body .kg-callout-text,
-.has-serif-body .kg-toggle-content > ol,
-.has-serif-body .kg-toggle-content > ul,
-.has-serif-body .kg-toggle-content > p {
+.has-serif-body .gh-content .kg-callout-text,
+.has-serif-body .gh-content .kg-toggle-content > ol,
+.has-serif-body .gh-content .kg-toggle-content > ul,
+.has-serif-body .gh-content .kg-toggle-content > p {
     font-family: var(--font-serif);
 }
 
