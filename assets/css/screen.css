@@ -658,7 +658,7 @@ is the very first element in the post content */
     }
 }
 
-.has-serif-body .gh-content > blockquote:not([class]),
+.has-serif-body .gh-content > blockquote,
 .has-serif-body .gh-content > ol,
 .has-serif-body .gh-content > ul,
 .has-serif-body .gh-content > dl,
