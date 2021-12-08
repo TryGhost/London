@@ -628,6 +628,7 @@ is the very first element in the post content */
     word-break: break-word;
 }
 
+.gh-content > blockquote:not([class]),
 .gh-content > ol,
 .gh-content > ul,
 .gh-content > dl,
@@ -644,6 +645,7 @@ is the very first element in the post content */
 }
 
 @media (max-width: 500px) {
+    .gh-content > blockquote:not([class]),
     .gh-content > ol,
     .gh-content > ul,
     .gh-content > dl,
@@ -656,7 +658,7 @@ is the very first element in the post content */
     }
 }
 
-.has-serif-body .gh-content > blockquote,
+.has-serif-body .gh-content > blockquote:not([class]),
 .has-serif-body .gh-content > ol,
 .has-serif-body .gh-content > ul,
 .has-serif-body .gh-content > dl,
@@ -690,22 +692,9 @@ is the very first element in the post content */
     margin: 0 auto !important;
 }
 
-.post-content-body blockquote {
-    margin: 0 0 1.5em;
-    padding: 0 1.5em;
+.post-content-body blockquote:not([class]) {
+    padding: 0 1.2em;
     border-left: var(--color-primary) 3px solid;
-}
-
-.post-content-body blockquote p {
-    margin: 0 0 1em 0;
-    color: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-style: italic;
-}
-
-.post-content-body blockquote p:last-child {
-    margin-bottom: 0;
 }
 
 .post-content-body code {
