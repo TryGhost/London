@@ -94,11 +94,6 @@
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/reframe.min.js"}}" data-swup-ignore-script></script>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
@@ -110,11 +105,11 @@
 
     {{!-- Handle swup content replacement --}}
     <script data-swup-ignore-script>
-        $(document).ready(function () {
-            // Mobile Menu Trigger
-            $('.nav-burger').click(function () {
-                $('body').toggleClass('site-head-open');
-            });
+        document.addEventListener("DOMContentLoaded", function(event) {
+             // Mobile Menu Trigger
+             document.getElementsByClassName("nav-burger")[0].onclick = function() {
+                document.body.classList.toggle("site-head-open");
+             };
         });
 
         // Initiate Swup transitions
@@ -124,7 +119,7 @@
         document.addEventListener('swup:contentReplaced', event => {
             window.scrollTo(0, 0);
             initInfiniteScroll(window, document);
-            $('body').removeClass('site-head-open');
+            document.body.classList.remove("site-head-open");
         });
     </script>
 
