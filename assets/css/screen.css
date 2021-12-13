@@ -564,32 +564,120 @@ body {
     transform: translateX(calc(50vw - 50%));
 }
 
-.post-content-body {
-    font-size: 1.9rem;
-    line-height: 1.65em;
+
+/* Content refers to styling all page and post content that is
+created within the Ghost editor. The main content handles
+headings, text, images and lists. We deal with cards lower down. */
+
+/* Default vertical spacing */
+.gh-content > * + * {
+    margin-top: 2.8rem;
+    margin-bottom: 0;
 }
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content > [id] {
+    margin: 0;
+    color: var(--color-base);
+}
+
+.has-serif-title .gh-content > [id] {
+    font-family: var(--font-serif);
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content > [id]:not(:first-child) {
+    margin-top: 4.8rem;
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-content > [id] + * {
+    margin-top: 1.6rem;
+}
+
+.gh-content > [id] + .kg-card {
+    margin-top: 2.8rem;
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-content > hr,
+.gh-content > blockquote {
+    position: relative;
+    margin-top: 6.4rem;
+}
+
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+    margin-top: 6.4rem;
+}
+
+/* Cards */
+.gh-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: 6.4rem;
+}
+
+.gh-content .kg-card + :not(.kg-card) {
+    margin-top: 6.4rem;
+}
+
+/* Now the content typography styles */
+.gh-content a:not(.gh-post-upgrade-cta a):not(.kg-bookmark-container):not(.kg-btn):not(.kg-nft-card-container):not(.kg-callout-card-accent a) {
+    color: var(--ghost-accent-color);
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.gh-content > blockquote:not([class]),
+.gh-content > ol,
+.gh-content > ul,
+.gh-content > dl,
+.gh-content > p {
+    font-size: 1.9rem;
+    line-height: 1.6;
+}
+
+.gh-content .kg-callout-text,
+.gh-content .kg-toggle-content > ol,
+.gh-content .kg-toggle-content > ul,
+.gh-content .kg-toggle-content > p {
+    font-size: 1.7rem;
+}
+
 @media (max-width: 500px) {
-    .post-content-body {
+    .gh-content > blockquote:not([class]),
+    .gh-content > ol,
+    .gh-content > ul,
+    .gh-content > dl,
+    .gh-content > p,
+    .gh-content .kg-callout-text,
+    .gh-content .kg-toggle-content > ol,
+    .gh-content .kg-toggle-content > ul,
+    .gh-content .kg-toggle-content > p {
         font-size: 1.7rem;
     }
 }
 
-.post-content-body h1,
-.post-content-body h2,
-.post-content-body h3,
-.post-content-body h4,
-.post-content-body h5,
-.post-content-body h6 {
-    color: var(--color-base);
+.has-serif-body .gh-content > blockquote,
+.has-serif-body .gh-content > ol,
+.has-serif-body .gh-content > ul,
+.has-serif-body .gh-content > dl,
+.has-serif-body .gh-content > p,
+.has-serif-body .gh-content .kg-callout-text,
+.has-serif-body .gh-content .kg-toggle-content > ol,
+.has-serif-body .gh-content .kg-toggle-content > ul,
+.has-serif-body .gh-content .kg-toggle-content > p {
+    font-family: var(--font-serif);
 }
 
-.has-serif-title .post-content-body h1,
-.has-serif-title .post-content-body h2,
-.has-serif-title .post-content-body h3,
-.has-serif-title .post-content-body h4,
-.has-serif-title .post-content-body h5,
-.has-serif-title .post-content-body h6 {
-    font-family: var(--font-serif);
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
+    padding-left: 4rem;
+}
+
+.gh-content li + li {
+    margin-top: 0.8rem;
 }
 
 .post-content-body li {
@@ -604,22 +692,9 @@ body {
     margin: 0 auto !important;
 }
 
-.post-content-body blockquote {
-    margin: 0 0 1.5em;
-    padding: 0 1.5em;
+.post-content-body blockquote:not([class]) {
+    padding: 0 1.2em;
     border-left: var(--color-primary) 3px solid;
-}
-
-.post-content-body blockquote p {
-    margin: 0 0 1em 0;
-    color: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-style: italic;
-}
-
-.post-content-body blockquote p:last-child {
-    margin-bottom: 0;
 }
 
 .post-content-body code {
@@ -663,10 +738,6 @@ body {
     margin: 1.5em 0 3em;
 }
 
-.post-content-body hr {
-    margin: 4vw 0;
-}
-
 .post-content-body hr:after {
     content: "";
     position: absolute;
@@ -679,14 +750,6 @@ body {
     background: color(var(--color-border) l(+5%));
     box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
-}
-
-.has-serif-body .post-content-body > blockquote,
-.has-serif-body .post-content-body > ol,
-.has-serif-body .post-content-body > ul,
-.has-serif-body .post-content-body > dl,
-.has-serif-body .post-content-body > p {
-    font-family: var(--font-serif);
 }
 
 .footnotes-sep {
