@@ -93,6 +93,7 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
+    <script src="{{asset "built/reframe.min.js"}}" data-swup-ignore-script></script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
@@ -121,6 +122,21 @@
             document.body.classList.remove("site-head-open");
         });
     </script>
+
+    {{#is "post, page"}}
+        <script>
+            const sources = [
+                '.gh-content iframe[src*="youtube.com"]',
+                '.gh-content iframe[src*="youtube-nocookie.com"]',
+                '.gh-content iframe[src*="player.vimeo.com"]',
+                '.gh-content iframe[src*="kickstarter.com"][src*="video.html"]',
+                'object',
+                'embed',
+            ];
+
+            reframe(document.querySelectorAll(sources.join(',')));
+        </script>
+    {{/is}}
 
 </body>
 </html>
