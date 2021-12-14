@@ -339,7 +339,7 @@ a {
     transition: 0.4s ease;
 }
 
-a:hover {
+a:not(.kg-btn):not(.kg-product-card-button):hover {
     text-decoration: underline;
     transition: 0.2s ease;
 }
