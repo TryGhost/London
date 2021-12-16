@@ -1,7 +1,7 @@
 /* Styling for Ghost-specific elements
 /* ---------------------------------------------------------- */
 
-.kg-toggle-card .kg-toggle-heading-text {
+.kg-card.kg-toggle-card .kg-toggle-heading-text {
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -11,12 +11,8 @@
     box-shadow: none;
 }
 
-.has-serif-title .kg-toggle-heading-text {
+.has-serif-title .kg-toggle-card .kg-toggle-heading-text {
     font-family: var(--font-serif);
-}
-
-.kg-toggle-content > * + * {
-    margin: 2rem 0 0;
 }
 
 .kg-callout-card-accent a {
@@ -28,11 +24,12 @@ blockquote.kg-blockquote-alt {
     font-weight: 700;
 }
 
-.kg-button-card .kg-btn {
+.kg-card.kg-button-card .kg-btn {
     font-size: 1.05em;
 }
 
-.kg-audio-card button {
+.kg-card.kg-audio-card button,
+.kg-card.kg-video-card button {
     color: inherit !important;
     box-shadow: none;
 }
