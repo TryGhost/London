@@ -50,7 +50,7 @@
     "devDependencies": {
         "autoprefixer": "10.4.4",
         "beeper": "2.1.0",
-        "cssnano": "5.1.4",
+        "cssnano": "5.1.5",
         "gscan": "4.23.1",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
@@ -62,7 +62,7 @@
         "gulp-zip": "5.1.0",
         "postcss": "8.4.12",
         "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "12.1.4",
+        "postcss-custom-properties": "12.1.5",
         "postcss-easy-import": "4.0.0"
     },
     "config": {
