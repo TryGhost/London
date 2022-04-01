@@ -49,7 +49,7 @@
     "devDependencies": {
         "autoprefixer": "10.4.4",
         "beeper": "2.1.0",
-        "cssnano": "5.1.5",
+        "cssnano": "5.1.7",
         "gscan": "4.25.3",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
