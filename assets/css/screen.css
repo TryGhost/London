@@ -87,7 +87,7 @@ body {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: color(var(--color-base) l(+50%));
+    color: color-mod(var(--color-base) l(+50%));
 }
 
 .error-link {
@@ -112,7 +112,7 @@ body {
 
 .page-head-description {
     margin: 0 0 1.6vw;
-    color: color(var(--color-border) l(-20%));
+    color: color-mod(var(--color-border) l(-20%));
     font-size: 2.2rem;
     line-height: 1.35em;
 }
@@ -125,7 +125,7 @@ body {
 .site-foot {
     margin: 3vw 0 1vw;
     text-align: center;
-    color: color(var(--color-border) l(-20%));
+    color: color-mod(var(--color-border) l(-20%));
     font-size: 1.4rem;
 }
 
@@ -715,11 +715,11 @@ is the very first element in the post content */
     margin: 1.5em 0 3em;
     padding: 20px;
     max-width: 100%;
-    border: color(var(--color-base) l(-10%)) 1px solid;
+    border: color-mod(var(--color-base) l(-10%)) 1px solid;
     color: var(--color-bg);
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: color(var(--color-base) l(-3%));
+    background: color-mod(var(--color-base) l(-3%));
     border-radius: 5px;
 }
 
@@ -747,7 +747,7 @@ is the very first element in the post content */
     margin-left: -10px;
     width: 1px;
     height: 30px;
-    background: color(var(--color-border) l(+5%));
+    background: color-mod(var(--color-border) l(+5%));
     box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
 }
@@ -780,7 +780,7 @@ is the very first element in the post content */
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    color: color(var(--color-border) l(-20%));
+    color: color-mod(var(--color-border) l(-20%));
 }
 
 .author-links {
