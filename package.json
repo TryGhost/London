@@ -60,8 +60,7 @@
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.1.0",
         "postcss": "8.4.12",
-        "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "12.1.6",
+        "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0"
     },
     "config": {

@@ -35,7 +35,7 @@ blockquote.kg-blockquote-alt {
 }
 
 .kg-card.kg-header-card.kg-style-light {
-    background-color: color(var(--color-bg) l(-3%));
+    background-color: color-mod(var(--color-bg) l(-3%));
 }
 
 .kg-card.kg-header-card.kg-style-light h2.kg-header-card-header {
