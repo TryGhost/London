@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}} is-head-n--b--a{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<div class="site-wrapper">
+
+    <header id="gh-head" class="gh-head">
+    <div class="gh-head-inner">
+
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+            </div>
+            <button class="gh-burger"></button>
+        </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+        </nav>
+
+        <div class="gh-head-actions">
+            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+            {{#if @site.facebook}}
+                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+            {{/if}}
+            {{#if @site.twitter}}
+                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+            {{/if}}
+        </div>
+
+    </div>
+    </header>
+
+    <main id="site-main" class="site-main">
+        {{{body}}}
+    </main>
+
+    <footer class="gh-foot">
+        <div class="gh-foot-inner gh-inner">
+            <nav class="gh-foot-menu"></nav>
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}} — <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+            <div class="gh-powered-by"></div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
+</body>
+</html>
