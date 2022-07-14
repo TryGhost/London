@@ -1,10 +1,9 @@
 /* Variables
 /* ---------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800');
+@import "https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800";
 
 :root {
-
     /* Colours */
     --color-primary: var(--ghost-accent-color, #3eb0ef);
     --color-base: #131313;
@@ -31,5 +30,4 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.5rem;
-
 }

@@ -5,13 +5,11 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 */
 
-
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 @import "shared/assets/css/screen.css";
 @import "fonts.css";
 @import "vars.css";
-
 
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
@@ -26,19 +24,19 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .hidden {
-    visibility: hidden;
     position: absolute;
     text-indent: -9999px;
+    visibility: hidden;
 }
-
 
 /* Layout
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-    padding: 3vw;
     min-height: 100vh;
+    padding: 3vw;
 }
+
 @media (max-width: 850px) {
     .site-wrapper {
         padding: 6vw;
@@ -50,35 +48,10 @@ production stylesheet in assets/built/screen.css using gulp dev
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 12vw 0;
     max-width: 60%;
+    padding: 12vw 0;
     margin: auto;
     text-align: center;
-}
-
-.error-head {
-    height: 75vh;
-}
-
-.error-head h1 {
-    margin: 0;
-    font-size: 7rem;
-    line-height: 1.1em;
-    font-weight: var(--font-heavy);
-    letter-spacing: 10px;
-}
-
-.error-head p {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: color-mod(var(--color-base) l(+50%));
-}
-
-.error-link {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    text-decoration: underline;
 }
 
 .page-head-title {
@@ -88,9 +61,11 @@ production stylesheet in assets/built/screen.css using gulp dev
     line-height: 1.3;
     color: var(--color-base);
 }
+
 .has-serif-title .page-head-title {
     font-family: var(--font-serif);
 }
+
 @media (max-width: 500px) {
     .page-head-title {
         font-size: 2rem;
@@ -98,11 +73,13 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .page-head-description {
-    margin: 0 0 1.6vw;
-    color: color-mod(var(--color-border) l(-20%));
+    margin: 16px 0;
     font-size: 2.2rem;
     line-height: 1.35em;
+    color: var(--color-base);
+    opacity: 0.5;
 }
+
 @media (max-width: 500px) {
     .page-head-description {
         font-size: 1.6rem;
@@ -138,14 +115,13 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .post-card {
     position: relative;
-    flex: 1 1 50%;
     display: flex;
-    position: relative;
+    flex: 1 1 50%;
     height: 35vw;
-    background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
-    background-size: cover;
     overflow: hidden;
     counter-increment: posts;
+    background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
+    background-size: cover;
 }
 
 @media (max-width: 700px) {
@@ -160,8 +136,8 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .post-card-link {
-    flex: 1 1 auto;
     display: block;
+    flex: 1 1 auto;
 }
 
 .post-card-link:hover {
@@ -169,28 +145,29 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .post-card-content {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     opacity: 1;
-    transition: opacity 0.5s cubic-bezier(.33,0,.2,1);
+    transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
 }
 
 .post-card.with-image .post-card-content {
     opacity: 0;
 }
+
 @media (max-width: 700px) {
-  .post-card.with-image .post-card-content {
-      opacity: 1;
-  }
+    .post-card.with-image .post-card-content {
+        opacity: 1;
+    }
 }
 
 .post-card-link:hover .post-card-content {
@@ -198,35 +175,36 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .post-card-title {
-    margin: 0;
     display: inline-block;
+    max-width: 70%;
+    margin: 0;
     font-size: 3.4rem;
     font-weight: 800;
-    max-width: 70%;
-    text-align: center;
     color: var(--color-white);
+    text-align: center;
 }
+
 .has-serif-title .post-card-title {
     font-family: var(--font-serif);
 }
 
 /* Posts without images */
-.post-card.no-image:before {
-    display: block;
-    content: counter(posts);
+.post-card.no-image::before {
     position: absolute;
-    bottom: -0.15em;
     right: 5vw;
+    bottom: -0.15em;
+    display: block;
     font-size: 28vw;
-    line-height: 1em;
     font-weight: var(--font-heavy);
+    line-height: 1em;
+    color: rgba(255, 255, 255, 0.1);
     letter-spacing: -0.05em;
-    color: rgba(255,255,255,0.1);
+    content: counter(posts);
 }
 
 .post-card.no-image .post-card-content {
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-start;
     padding: 4vw;
 }
 
@@ -240,7 +218,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 @media (max-width: 700px) {
-    .post-card.no-image:before {
+    .post-card.no-image::before {
         font-size: 50vw;
     }
 }
@@ -250,8 +228,8 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .post-content {
     max-width: 720px;
-    margin: 0 auto;
     padding: 6vw 0;
+    margin: 0 auto;
 }
 
 .post-content-header {
@@ -262,11 +240,12 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .post-content-title {
     margin: 0 0 3vw;
+    font-weight: 800;
     line-height: 1.1;
     color: var(--color-base);
     text-align: center;
-    font-weight: 800;
 }
+
 .has-serif-title .post-content-title {
     font-family: var(--font-serif);
 }
@@ -279,9 +258,11 @@ production stylesheet in assets/built/screen.css using gulp dev
     text-align: center;
     opacity: 0.5;
 }
+
 .has-serif-body .post-content-excerpt {
     font-family: var(--font-serif);
 }
+
 @media (max-width: 500px) {
     .post-content-excerpt {
         font-size: 1.8rem;
@@ -289,12 +270,12 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .post-content-image {
-    margin: 4vw 0;
     position: relative;
     width: 75vw;
     min-width: 100%;
-    margin-left: calc(50% - 50vw);
+    margin: 4vw 0;
     margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
     transform: translateX(calc(50vw - 50%));
 }
 
@@ -307,10 +288,9 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .author-meta {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
-    color: color-mod(var(--color-border) l(-20%));
 }
 
 .author-links {
@@ -321,8 +301,8 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .author-links a {
     display: block;
-    margin: 0;
     padding: 0 12px;
+    margin: 0;
     color: var(--color-base);
     opacity: 0.4;
 }

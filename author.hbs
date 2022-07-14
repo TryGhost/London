@@ -5,11 +5,11 @@
 {{!-- Everything inside the #author tags pulls data from the author --}}
 <header class="page-head">
     <h1 class="page-head-title">{{name}}</h1>
-    <p class="page-head-description">
-        {{#if bio}}
+    {{#if bio}}
+        <p class="page-head-description">
             {{bio}}
-        {{/if}}
-    </p>
+        </p>
+    {{/if}}
     <div class="author-meta">
         <div class="author-links">
             {{#if website}}
