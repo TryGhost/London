@@ -1,8 +1,8 @@
 {
     "name": "london",
     "description": "A minimum, image-centric theme for Ghost.",
-    "demo": "https://london.ghost.io",
     "version": "1.0.0",
+    "private": true,
     "engines": {
         "ghost": ">=4.0.0"
     },
