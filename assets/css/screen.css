@@ -7,7 +7,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
-@import "shared/assets/css/screen.css";
+@import "@tryghost/shared-theme-assets/assets/css/screen.css";
 @import "fonts.css";
 @import "vars.css";
 
