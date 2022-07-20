@@ -1,0 +1,31 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+    /* Colours */
+    --color-primary: var(--ghost-accent-color, #3eb0ef);
+    --color-base: #131313;
+    --color-border: #ddd;
+    --color-bg: #f8f8f8;
+
+    /* Fonts */
+    --font-sans: Mulish, sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0.5rem;
+}
