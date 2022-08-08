@@ -71,6 +71,10 @@
 
 </div>
 
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
 <script src="{{asset "built/main.min.js"}}"></script>
 
 {{ghost_foot}}
