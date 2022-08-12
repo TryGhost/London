@@ -24,9 +24,11 @@
         {{content}}
     </div>
 
-    {{!-- <section class="post-content-comments">
-        If you want to embed comments, this is a good place to do it!
-    </section> --}}
+    {{#if comments}}
+        <div class="gh-comments">
+            {{comments}}
+        </div>
+    {{/if}}
 
 </article>
 {{/post}}
