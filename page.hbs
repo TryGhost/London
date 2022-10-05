@@ -3,13 +3,13 @@
 {{#post}}
 <article class="post-content {{post_class}}">
 
-    <header class="post-content-header">
+    <header class="post-content-header gh-canvas">
         <h1 class="post-content-title">{{title}}</h1>
+        {{> "feature-image"}}
     </header>
 
-    {{> "feature-image"}}
 
-    <div class="post-content-body gh-content">
+    <div class="post-content-body gh-content gh-canvas">
         {{content}}
     </div>
 

@@ -1,6 +1,16 @@
 {{#if feature_image}}
-    <figure class="post-content-image">
-        <img class="kg-image" src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+    <figure class="post-content-image kg-width-full">
+        <img
+            class="kg-image"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1200w,
+                    {{img_url feature_image size="xl"}} 2000w,
+                    {{img_url feature_image}}"
+            sizes="(min-width: 961px) 75vw, 88vw"
+            src="{{img_url feature_image size="l"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+        >
         {{#if feature_image_caption}}
             <figcaption>{{feature_image_caption}}</figcaption>
         {{/if}}
