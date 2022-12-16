@@ -33,6 +33,7 @@
         "url": "https://github.com/TryGhost/London.git"
     },
     "bugs": "https://github.com/TryGhost/London/issues",
+    "docs": "https://london.ghost.io/about/",
     "config": {
         "posts_per_page": 15,
         "image_sizes": {
