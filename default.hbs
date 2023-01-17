@@ -33,7 +33,7 @@
                         {{/if}}
                     </a>
                 </div>
-                <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
                 <button class="gh-burger"></button>
             </div>
 
@@ -41,7 +41,7 @@
                 {{navigation}}
                 {{#unless @site.members_enabled}}
                     {{#match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{/unless}}
             </nav>
@@ -49,10 +49,10 @@
             <div class="gh-head-actions">
                 {{#unless @site.members_enabled}}
                     {{^match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{else}}
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
                     <div class="gh-head-members">
                         {{#unless @member}}
                             {{#unless @site.members_invite_only}}
