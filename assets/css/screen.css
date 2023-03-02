@@ -72,8 +72,13 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 @media (max-width: 500px) {
+    .page-head {
+        max-width: none;
+        padding: 20vw 0;
+    }
+
     .page-head-title {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -107,7 +112,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 @media (max-width: 850px) {
-    .gh-head {
+    body:not(.is-head-open) .gh-head {
         margin: -6vw;
     }
 }
@@ -243,12 +248,12 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 .post-content {
-    padding: 6vw 0;
+    padding-top: max(6vw, 64px);
     margin: 0 auto;
 }
 
 .post-content-title {
-    margin: 0 0 1vw;
+    margin: 0 0 16px;
     font-weight: 800;
     line-height: 1.1;
     color: var(--color-base);
@@ -278,11 +283,11 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .post-content-image {
-    margin: 4vw 0 2vw;
+    margin: 40px 0 2vw;
 }
 
 .post-content-image .kg-image {
-    width: 75vw;
+    width: 100%;
 }
 
 @media (max-width: 960px) {
