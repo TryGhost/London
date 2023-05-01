@@ -42,7 +42,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     padding: 0 3vw 3vw;
 }
 
-@media (width <= 850px) {
+@media (max-width: 850px) {
     .site-wrapper {
         padding: 6vw;
     }
@@ -71,7 +71,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-family: var(--font-serif);
 }
 
-@media (width <= 500px) {
+@media (max-width: 500px) {
     .page-head {
         max-width: none;
         padding: 20vw 0;
@@ -90,7 +90,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     opacity: 0.5;
 }
 
-@media (width <= 500px) {
+@media (max-width: 500px) {
     .page-head-description {
         font-size: 1.6rem;
     }
@@ -111,7 +111,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-weight: 600;
 }
 
-@media (width <= 850px) {
+@media (max-width: 850px) {
     body:not(.is-head-open) .gh-head {
         margin: -6vw;
     }
@@ -136,7 +136,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     background-size: cover;
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
     .post-card {
         flex: 1 1 100%;
         height: 70vw;
@@ -185,7 +185,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     opacity: 0;
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
     .post-card:not(.no-image) .post-card-content {
         opacity: 1;
     }
@@ -238,7 +238,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     text-decoration: underline;
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
     .post-card.no-image::before {
         font-size: 50vw;
     }
@@ -276,7 +276,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-family: var(--font-serif);
 }
 
-@media (width <= 500px) {
+@media (max-width: 500px) {
     .post-content-excerpt {
         font-size: 1.8rem;
     }
@@ -290,7 +290,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     width: 100%;
 }
 
-@media (width <= 960px) {
+@media (max-width: 960px) {
     .post-content-image .kg-image {
         width: 88vw;
     }
