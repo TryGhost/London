@@ -65,6 +65,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-weight: 800;
     line-height: 1.3;
     color: var(--color-base);
+    word-break: break-word;
 }
 
 .has-serif-title .page-head-title {
@@ -203,6 +204,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-weight: 800;
     color: var(--color-white);
     text-align: center;
+    word-break: break-word;
 }
 
 .has-serif-title .post-card-title {
@@ -258,6 +260,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     line-height: 1.1;
     color: var(--color-base);
     text-align: center;
+    word-break: break-word;
 }
 
 .has-serif-title .post-content-title {
@@ -269,6 +272,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     line-height: 1.6em;
     color: var(--color-base);
     text-align: center;
+    word-break: break-word;
     opacity: 0.5;
 }
 
