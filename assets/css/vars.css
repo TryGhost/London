@@ -27,4 +27,5 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.5rem;
+    --header-spacing: max(6vw, 64px);
 }

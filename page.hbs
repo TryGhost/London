@@ -3,10 +3,12 @@
 {{#post}}
 <article class="post-content {{post_class}}">
 
-    <header class="post-content-header gh-canvas">
-        <h1 class="post-content-title">{{title}}</h1>
-        {{> "feature-image"}}
-    </header>
+    {{#match @page.show_title_and_feature_image}}
+        <header class="post-content-header gh-canvas">
+            <h1 class="post-content-title">{{title}}</h1>
+            {{> "feature-image"}}
+        </header>
+    {{/match}}
 
 
     <div class="post-content-body gh-content gh-canvas">

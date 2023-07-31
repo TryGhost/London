@@ -39,7 +39,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .site-wrapper {
     min-height: 100vh;
-    padding: 0 3vw 3vw;
+    padding: 0 3vw;
 }
 
 @media (max-width: 850px) {
@@ -252,6 +252,14 @@ production stylesheet in assets/built/screen.css using gulp dev
 .post-content {
     padding-top: max(6vw, 64px);
     margin: 0 auto;
+}
+
+.page-template .post-content {
+    padding-top: 0;
+}
+
+.page-template .post-content-header {
+    margin-top: var(--header-spacing);
 }
 
 .post-content-title {
