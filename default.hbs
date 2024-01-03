@@ -74,13 +74,19 @@
         {{{body}}}
     </main>
 
-    <footer class="gh-foot">
+    <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
         <div class="gh-foot-inner gh-inner">
-            <nav class="gh-foot-menu"></nav>
             <div class="gh-copyright">
-                {{@site.title}} © {{date format="YYYY"}} — <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                {{@site.title}} © {{date format="YYYY"}}
             </div>
-            <div class="gh-powered-by"></div>
+            {{#if @site.secondary_navigation}}
+                <nav class="gh-foot-menu">
+                    {{navigation type="secondary"}}
+                </nav>
+            {{/if}}
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
         </div>
     </footer>
 
