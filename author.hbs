@@ -16,10 +16,31 @@
             <a href="{{website}}" target="_blank" rel="noopener">Website</a> <span class="divider">/</span>
             {{/if}}
             {{#if twitter}}
-            <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a> <span class="divider">/</span>
+            <a href="{{social_url type="twitter"}}" target="_blank" rel="noopener">Twitter</a> <span class="divider">/</span>
             {{/if}}
             {{#if facebook}}
-            <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a> <span class="divider">/</span>
+            <a href="{{social_url type="facebook"}}" target="_blank" rel="noopener">Facebook</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if linkedin}}
+            <a href="{{social_url type="linkedin"}}" target="_blank" rel="noopener">LinkedIn</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if bluesky}}
+            <a href="{{social_url type="bluesky"}}" target="_blank" rel="noopener">Bluesky</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if threads}}
+            <a href="{{social_url type="threads"}}" target="_blank" rel="noopener">Threads</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if mastodon}}
+            <a href="{{social_url type="mastodon"}}" target="_blank" rel="noopener">Mastodon</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if tiktok}}
+            <a href="{{social_url type="tiktok"}}" target="_blank" rel="noopener">TikTok</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if youtube}}
+            <a href="{{social_url type="youtube"}}" target="_blank" rel="noopener">YouTube</a> <span class="divider">/</span>
+            {{/if}}
+            {{#if instagram}}
+            <a href="{{social_url type="instagram"}}" target="_blank" rel="noopener">Instagram</a> <span class="divider">/</span>
             {{/if}}
             <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">RSS</a>
         </div>
