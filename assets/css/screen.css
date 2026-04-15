@@ -345,3 +345,8 @@ production stylesheet in assets/built/screen.css using gulp dev
     display: inline-block;
     margin: 0 3px;
 }
+
+.post-content > .gh-meta-share {
+    justify-content: center;
+    margin-top: 48px;
+}
