@@ -1,5 +1,8 @@
 # London
 
+> [!IMPORTANT]
+> This repo is synced automatically with the [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+
 A custom, image-centric theme for [Ghost](https://github.com/TryGhost/Ghost). Made for publishers and portfolios with plenty of graphics to show off to the world.
 
 **Demo: https://london.ghost.io**
@@ -28,10 +31,6 @@ The `zip` Gulp task packages the theme files into `dist/london.zip`, which you c
 ```bash
 pnpm zip
 ```
-
-# Contribution
-
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
 
 ## Theme translations
 
